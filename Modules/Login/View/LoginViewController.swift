@@ -6,8 +6,8 @@ class LoginViewController: UIViewController {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Login"
-        label.textColor = UIColor.getColor(color: .redDark)
-        label.font = UIFont(descriptor: UIFontDescriptor(name: "Amaranth-Bold", size: 22), size: 22)
+        label.textColor = UIColor.theme(.redDark)
+        label.font = UIFont.theme(.bold30)
         label.textAlignment = .center
         return label
     }()
@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.getColor(color: .white)
+        self.view.backgroundColor = UIColor.theme(.white)
         setUpTitleLabel()
     }
 
