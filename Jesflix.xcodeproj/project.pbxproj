@@ -13,6 +13,21 @@
 		605C705F297D630000249F0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 605C705D297D630000249F0B /* Main.storyboard */; };
 		605C7061297D630200249F0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 605C7060297D630200249F0B /* Assets.xcassets */; };
 		605C7064297D630200249F0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 605C7062297D630200249F0B /* LaunchScreen.storyboard */; };
+		605C7074297D63C500249F0B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605C7073297D63C500249F0B /* AppCoordinator.swift */; };
+		605C7081297D643900249F0B /* LoginInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605C7077297D643900249F0B /* LoginInteractorProtocol.swift */; };
+		605C7082297D643900249F0B /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605C7078297D643900249F0B /* LoginPresenter.swift */; };
+		605C7083297D643900249F0B /* LoginViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605C7079297D643900249F0B /* LoginViewControllerProtocol.swift */; };
+		605C7084297D643900249F0B /* LoginPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605C707A297D643900249F0B /* LoginPresenterProtocol.swift */; };
+		605C7085297D643900249F0B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605C707B297D643900249F0B /* LoginViewController.swift */; };
+		605C7086297D643900249F0B /* LoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605C707C297D643900249F0B /* LoginBuilder.swift */; };
+		605C7087297D643900249F0B /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605C707D297D643900249F0B /* LoginInteractor.swift */; };
+		605C7088297D643900249F0B /* LoginDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605C707E297D643900249F0B /* LoginDataManagerProtocol.swift */; };
+		605C7089297D643900249F0B /* LoginOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605C707F297D643900249F0B /* LoginOutput.swift */; };
+		605C708A297D643900249F0B /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605C7080297D643900249F0B /* LoginDataManager.swift */; };
+		605C709A297D691500249F0B /* Amaranth-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 605C7095297D682C00249F0B /* Amaranth-Bold.ttf */; };
+		605C709B297D691700249F0B /* Amaranth-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 605C7096297D683000249F0B /* Amaranth-BoldItalic.ttf */; };
+		605C709C297D691A00249F0B /* Amaranth-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 605C7097297D683100249F0B /* Amaranth-Italic.ttf */; };
+		605C709D297D691C00249F0B /* Amaranth-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 605C7098297D683A00249F0B /* Amaranth-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +39,21 @@
 		605C7060297D630200249F0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		605C7063297D630200249F0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		605C7065297D630200249F0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		605C7073297D63C500249F0B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		605C7077297D643900249F0B /* LoginInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorProtocol.swift; sourceTree = "<group>"; };
+		605C7078297D643900249F0B /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		605C7079297D643900249F0B /* LoginViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerProtocol.swift; sourceTree = "<group>"; };
+		605C707A297D643900249F0B /* LoginPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocol.swift; sourceTree = "<group>"; };
+		605C707B297D643900249F0B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		605C707C297D643900249F0B /* LoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilder.swift; sourceTree = "<group>"; };
+		605C707D297D643900249F0B /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		605C707E297D643900249F0B /* LoginDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManagerProtocol.swift; sourceTree = "<group>"; };
+		605C707F297D643900249F0B /* LoginOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOutput.swift; sourceTree = "<group>"; };
+		605C7080297D643900249F0B /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
+		605C7095297D682C00249F0B /* Amaranth-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Bold.ttf"; sourceTree = "<group>"; };
+		605C7096297D683000249F0B /* Amaranth-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-BoldItalic.ttf"; sourceTree = "<group>"; };
+		605C7097297D683100249F0B /* Amaranth-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Italic.ttf"; sourceTree = "<group>"; };
+		605C7098297D683A00249F0B /* Amaranth-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +70,9 @@
 		605C704B297D630000249F0B = {
 			isa = PBXGroup;
 			children = (
+				605C708F297D673100249F0B /* Theme */,
+				605C7075297D641200249F0B /* Modules */,
+				605C7072297D63B500249F0B /* Coordinators */,
 				605C7056297D630000249F0B /* Jesflix */,
 				605C7055297D630000249F0B /* Products */,
 			);
@@ -65,6 +98,90 @@
 				605C7065297D630200249F0B /* Info.plist */,
 			);
 			path = Jesflix;
+			sourceTree = "<group>";
+		};
+		605C7072297D63B500249F0B /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				605C7073297D63C500249F0B /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		605C7075297D641200249F0B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				605C7076297D641800249F0B /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		605C7076297D641800249F0B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				605C708E297D645300249F0B /* DataManager */,
+				605C708D297D644E00249F0B /* Interactor */,
+				605C708C297D644900249F0B /* Presenter */,
+				605C708B297D643E00249F0B /* View */,
+				605C707C297D643900249F0B /* LoginBuilder.swift */,
+				605C707F297D643900249F0B /* LoginOutput.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		605C708B297D643E00249F0B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				605C7079297D643900249F0B /* LoginViewControllerProtocol.swift */,
+				605C707B297D643900249F0B /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		605C708C297D644900249F0B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				605C7078297D643900249F0B /* LoginPresenter.swift */,
+				605C707A297D643900249F0B /* LoginPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		605C708D297D644E00249F0B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				605C7077297D643900249F0B /* LoginInteractorProtocol.swift */,
+				605C707D297D643900249F0B /* LoginInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		605C708E297D645300249F0B /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				605C707E297D643900249F0B /* LoginDataManagerProtocol.swift */,
+				605C7080297D643900249F0B /* LoginDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		605C708F297D673100249F0B /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				605C7090297D673B00249F0B /* Font */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		605C7090297D673B00249F0B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				605C7095297D682C00249F0B /* Amaranth-Bold.ttf */,
+				605C7096297D683000249F0B /* Amaranth-BoldItalic.ttf */,
+				605C7097297D683100249F0B /* Amaranth-Italic.ttf */,
+				605C7098297D683A00249F0B /* Amaranth-Regular.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +242,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				605C709C297D691A00249F0B /* Amaranth-Italic.ttf in Resources */,
+				605C709B297D691700249F0B /* Amaranth-BoldItalic.ttf in Resources */,
 				605C7064297D630200249F0B /* LaunchScreen.storyboard in Resources */,
 				605C7061297D630200249F0B /* Assets.xcassets in Resources */,
+				605C709D297D691C00249F0B /* Amaranth-Regular.ttf in Resources */,
 				605C705F297D630000249F0B /* Main.storyboard in Resources */,
+				605C709A297D691500249F0B /* Amaranth-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +259,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				605C7085297D643900249F0B /* LoginViewController.swift in Sources */,
+				605C7087297D643900249F0B /* LoginInteractor.swift in Sources */,
+				605C7082297D643900249F0B /* LoginPresenter.swift in Sources */,
+				605C7089297D643900249F0B /* LoginOutput.swift in Sources */,
+				605C7083297D643900249F0B /* LoginViewControllerProtocol.swift in Sources */,
+				605C7084297D643900249F0B /* LoginPresenterProtocol.swift in Sources */,
+				605C7088297D643900249F0B /* LoginDataManagerProtocol.swift in Sources */,
+				605C7081297D643900249F0B /* LoginInteractorProtocol.swift in Sources */,
+				605C7074297D63C500249F0B /* AppCoordinator.swift in Sources */,
 				605C705C297D630000249F0B /* ViewController.swift in Sources */,
+				605C7086297D643900249F0B /* LoginBuilder.swift in Sources */,
 				605C7058297D630000249F0B /* AppDelegate.swift in Sources */,
 				605C705A297D630000249F0B /* SceneDelegate.swift in Sources */,
+				605C708A297D643900249F0B /* LoginDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +419,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ANBRNG88KJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Jesflix/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -314,6 +447,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ANBRNG88KJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Jesflix/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

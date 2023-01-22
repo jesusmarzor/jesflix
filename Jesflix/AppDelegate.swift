@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Jesflix
-//
-//  Created by Martin Zorrilla, Jesus on 22/1/23.
-//
-
 import UIKit
 
 @main
