@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6016C674297DE10C0046935A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6016C673297DE10C0046935A /* Colors.swift */; };
+		6016C677297DE28C0046935A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6016C676297DE28C0046935A /* UIColor+Extensions.swift */; };
 		605C7058297D630000249F0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605C7057297D630000249F0B /* AppDelegate.swift */; };
 		605C705A297D630000249F0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605C7059297D630000249F0B /* SceneDelegate.swift */; };
 		605C705C297D630000249F0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605C705B297D630000249F0B /* ViewController.swift */; };
@@ -33,6 +35,8 @@
 
 /* Begin PBXFileReference section */
 		5738AAD43404D8F8F236E020 /* Pods_Jesflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jesflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6016C673297DE10C0046935A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		6016C676297DE28C0046935A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		605C7054297D630000249F0B /* Jesflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jesflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		605C7057297D630000249F0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		605C7059297D630000249F0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,9 +85,26 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		6016C672297DE0E60046935A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6016C675297DE27F0046935A /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6016C675297DE27F0046935A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6016C676297DE28C0046935A /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		605C704B297D630000249F0B = {
 			isa = PBXGroup;
 			children = (
+				6016C672297DE0E60046935A /* Utils */,
 				605C708F297D673100249F0B /* Theme */,
 				605C7075297D641200249F0B /* Modules */,
 				605C7072297D63B500249F0B /* Coordinators */,
@@ -185,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				605C7090297D673B00249F0B /* Font */,
+				6016C673297DE10C0046935A /* Colors.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -348,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				605C7085297D643900249F0B /* LoginViewController.swift in Sources */,
+				6016C674297DE10C0046935A /* Colors.swift in Sources */,
 				605C7087297D643900249F0B /* LoginInteractor.swift in Sources */,
 				605C7082297D643900249F0B /* LoginPresenter.swift in Sources */,
 				605C7089297D643900249F0B /* LoginOutput.swift in Sources */,
@@ -357,6 +380,7 @@
 				605C7081297D643900249F0B /* LoginInteractorProtocol.swift in Sources */,
 				605C7074297D63C500249F0B /* AppCoordinator.swift in Sources */,
 				605C705C297D630000249F0B /* ViewController.swift in Sources */,
+				6016C677297DE28C0046935A /* UIColor+Extensions.swift in Sources */,
 				605C7086297D643900249F0B /* LoginBuilder.swift in Sources */,
 				605C7058297D630000249F0B /* AppDelegate.swift in Sources */,
 				605C705A297D630000249F0B /* SceneDelegate.swift in Sources */,
