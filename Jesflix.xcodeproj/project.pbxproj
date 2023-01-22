@@ -78,7 +78,6 @@
 				CB7917AC5AE2C0FBD0ED54CA /* Pods-Jesflix.debug.xcconfig */,
 				C9426A5CC3B56D5C1F82F410 /* Pods-Jesflix.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -307,6 +306,7 @@
 		};
 		6039BDB3297DD3C800E7DAE9 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -321,7 +321,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then \nswiftlint lint --strict | sed \"s/warning:/error:/\"\n#echo \"skip\"\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint lint --strict | sed \"s/warning:/error:/\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		6879259457EC1A0AFAB35AF5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -511,6 +511,8 @@
 				DEVELOPMENT_TEAM = ANBRNG88KJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Jesflix/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Jesflix;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -540,6 +542,8 @@
 				DEVELOPMENT_TEAM = ANBRNG88KJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Jesflix/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Jesflix;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
