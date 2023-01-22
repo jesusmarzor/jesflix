@@ -1,13 +1,12 @@
 import UIKit
 
 class LoginBuilder {
-    
     private var coordinatorOutput: (LoginOutput) -> Void
-    
+
     init(coordinnatorOutput: @escaping (LoginOutput) -> Void) {
         self.coordinatorOutput = coordinnatorOutput
     }
-    
+
     func build() -> UIViewController {
         let dataManager = LoginDataManager()
         let interactor = LoginInteractor(dataManager: dataManager)
@@ -16,5 +15,4 @@ class LoginBuilder {
         presenter.view = view
         return view
     }
-    
 }

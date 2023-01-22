@@ -10,5 +10,4 @@ class LoginPresenter {
 }
 
 extension LoginPresenter: LoginPresenterProtocol {
-    
 }

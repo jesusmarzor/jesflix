@@ -1,10 +1,9 @@
 import UIKit
 
 class AppCoordinator {
-
     var navigator: UINavigationController
     private var state: AppCoordinatorState
-    
+
     init(with navigator: UINavigationController, state: AppCoordinatorState) {
         self.navigator = navigator
         self.state = state
@@ -34,9 +33,9 @@ class AppCoordinator {
             return nextState
         }
     }
-    
+
     private func goToLoginFlow() {
-        let vc = LoginBuilder(){_ in}.build()
+        let vc = LoginBuilder {_ in}.build()
         navigator.pushViewController(vc, animated: true)
     }
 }

@@ -1,3 +1,2 @@
 protocol LoginPresenterProtocol: AnyObject {
-    
 }

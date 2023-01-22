@@ -1,0 +1,21 @@
+only_rules: # delete `disabled_rules` & `opt_in_rules` if using this
+- closing_brace
+- colon
+- comma
+- no_space_in_method_call
+- closure_parameter_position
+- operator_whitespace
+- opening_brace
+- vertical_whitespace
+- let_var_whitespace
+- operator_usage_whitespace
+- vertical_whitespace_between_cases
+- vertical_whitespace_closing_braces
+- vertical_whitespace_opening_braces
+excluded:
+- Carthage
+- Pods
+- SwiftLint/Common/3rdPartyLib
+
+
+reporter: "xcode"

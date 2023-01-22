@@ -1,3 +1,2 @@
-protocol LoginDataManagerProtocol : AnyObject {
-
+protocol LoginDataManagerProtocol: AnyObject {
 }

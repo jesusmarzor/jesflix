@@ -1,3 +1,2 @@
-protocol LoginInteractorProtocol : AnyObject {
-
+protocol LoginInteractorProtocol: AnyObject {
 }

@@ -1,9 +1,8 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    
     private let presenter: LoginPresenterProtocol
-    
+
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Login"
@@ -12,13 +11,12 @@ class LoginViewController: UIViewController {
         label.textAlignment = .center
         return label
     }()
-    
+
     init (presenter: LoginPresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
-        
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -28,7 +26,7 @@ class LoginViewController: UIViewController {
         self.view.backgroundColor = UIColor(named: "white")
         setUpTitleLabel()
     }
-    
+
     private func setUpTitleLabel() {
         self.view.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -36,9 +34,8 @@ class LoginViewController: UIViewController {
         titleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
     }
-    
 }
 
-extension LoginViewController: LoginViewProtocol{
+extension LoginViewController: LoginViewProtocol {
     // TODO: Implement View Output Methods
 }

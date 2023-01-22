@@ -28,9 +28,11 @@
 		605C709B297D691700249F0B /* Amaranth-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 605C7096297D683000249F0B /* Amaranth-BoldItalic.ttf */; };
 		605C709C297D691A00249F0B /* Amaranth-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 605C7097297D683100249F0B /* Amaranth-Italic.ttf */; };
 		605C709D297D691C00249F0B /* Amaranth-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 605C7098297D683A00249F0B /* Amaranth-Regular.ttf */; };
+		8D43318DB99F69095338E031 /* Pods_Jesflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5738AAD43404D8F8F236E020 /* Pods_Jesflix.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5738AAD43404D8F8F236E020 /* Pods_Jesflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jesflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		605C7054297D630000249F0B /* Jesflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jesflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		605C7057297D630000249F0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		605C7059297D630000249F0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +56,8 @@
 		605C7096297D683000249F0B /* Amaranth-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-BoldItalic.ttf"; sourceTree = "<group>"; };
 		605C7097297D683100249F0B /* Amaranth-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Italic.ttf"; sourceTree = "<group>"; };
 		605C7098297D683A00249F0B /* Amaranth-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Regular.ttf"; sourceTree = "<group>"; };
+		C9426A5CC3B56D5C1F82F410 /* Pods-Jesflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jesflix.release.xcconfig"; path = "Target Support Files/Pods-Jesflix/Pods-Jesflix.release.xcconfig"; sourceTree = "<group>"; };
+		CB7917AC5AE2C0FBD0ED54CA /* Pods-Jesflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jesflix.debug.xcconfig"; path = "Target Support Files/Pods-Jesflix/Pods-Jesflix.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +65,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D43318DB99F69095338E031 /* Pods_Jesflix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		001BAC6B051DAD716A169475 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB7917AC5AE2C0FBD0ED54CA /* Pods-Jesflix.debug.xcconfig */,
+				C9426A5CC3B56D5C1F82F410 /* Pods-Jesflix.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		605C704B297D630000249F0B = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +90,8 @@
 				605C7072297D63B500249F0B /* Coordinators */,
 				605C7056297D630000249F0B /* Jesflix */,
 				605C7055297D630000249F0B /* Products */,
+				001BAC6B051DAD716A169475 /* Pods */,
+				A3835D61A356DB8D46CCB30C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,6 +201,14 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		A3835D61A356DB8D46CCB30C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5738AAD43404D8F8F236E020 /* Pods_Jesflix.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 605C7068297D630200249F0B /* Build configuration list for PBXNativeTarget "Jesflix" */;
 			buildPhases = (
+				4A5893E5344AAAD3A7293D20 /* [CP] Check Pods Manifest.lock */,
 				605C7050297D630000249F0B /* Sources */,
 				605C7051297D630000249F0B /* Frameworks */,
 				605C7052297D630000249F0B /* Resources */,
+				6039BDB3297DD3C800E7DAE9 /* Swiftlint */,
+				6879259457EC1A0AFAB35AF5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +281,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A5893E5344AAAD3A7293D20 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Jesflix-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6039BDB3297DD3C800E7DAE9 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then \nswiftlint lint --strict | sed \"s/warning:/error:/\"\n#echo \"skip\"\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		6879259457EC1A0AFAB35AF5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Jesflix/Pods-Jesflix-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Jesflix/Pods-Jesflix-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Jesflix/Pods-Jesflix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		605C7050297D630000249F0B /* Sources */ = {
@@ -414,6 +502,7 @@
 		};
 		605C7069297D630200249F0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB7917AC5AE2C0FBD0ED54CA /* Pods-Jesflix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -442,6 +531,7 @@
 		};
 		605C706A297D630200249F0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9426A5CC3B56D5C1F82F410 /* Pods-Jesflix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
