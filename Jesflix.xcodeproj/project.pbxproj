@@ -38,7 +38,7 @@
 		60FB83692986DD9F00F99D4C /* DtoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB83682986DD9F00F99D4C /* DtoUser.swift */; };
 		60FB836F2986E29A00F99D4C /* JesflixCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60FB836D2986E29A00F99D4C /* JesflixCoreData.xcdatamodeld */; };
 		60FB83712986E30600F99D4C /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB83702986E30600F99D4C /* CoreData.swift */; };
-		60FB837729872B5C00F99D4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60FB837629872B5C00F99D4C /* GoogleService-Info.plist */; };
+		60FB837929872C6A00F99D4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60FB837829872C6A00F99D4C /* GoogleService-Info.plist */; };
 		8D43318DB99F69095338E031 /* Pods_Jesflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5738AAD43404D8F8F236E020 /* Pods_Jesflix.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,7 +82,7 @@
 		60FB83682986DD9F00F99D4C /* DtoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoUser.swift; sourceTree = "<group>"; };
 		60FB836E2986E29A00F99D4C /* JesflixCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JesflixCoreData.xcdatamodel; sourceTree = "<group>"; };
 		60FB83702986E30600F99D4C /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
-		60FB837629872B5C00F99D4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		60FB837829872C6A00F99D4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C9426A5CC3B56D5C1F82F410 /* Pods-Jesflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jesflix.release.xcconfig"; path = "Target Support Files/Pods-Jesflix/Pods-Jesflix.release.xcconfig"; sourceTree = "<group>"; };
 		CB7917AC5AE2C0FBD0ED54CA /* Pods-Jesflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jesflix.debug.xcconfig"; path = "Target Support Files/Pods-Jesflix/Pods-Jesflix.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,7 +137,7 @@
 		605C704B297D630000249F0B = {
 			isa = PBXGroup;
 			children = (
-				60FB837629872B5C00F99D4C /* GoogleService-Info.plist */,
+				60FB837829872C6A00F99D4C /* GoogleService-Info.plist */,
 				60FB83672986DD8A00F99D4C /* Data */,
 				604367DA297F43BE006D9D6B /* Components */,
 				604367D8297F4215006D9D6B /* Localizable.strings */,
@@ -348,9 +348,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60FB837729872B5C00F99D4C /* GoogleService-Info.plist in Resources */,
 				605C709C297D691A00249F0B /* Amaranth-Italic.ttf in Resources */,
 				605C709B297D691700249F0B /* Amaranth-BoldItalic.ttf in Resources */,
+				60FB837929872C6A00F99D4C /* GoogleService-Info.plist in Resources */,
 				605C7064297D630200249F0B /* LaunchScreen.storyboard in Resources */,
 				605C7061297D630200249F0B /* Assets.xcassets in Resources */,
 				605C709D297D691C00249F0B /* Amaranth-Regular.ttf in Resources */,
