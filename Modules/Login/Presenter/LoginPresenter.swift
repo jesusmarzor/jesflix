@@ -12,7 +12,9 @@ class LoginPresenter {
 
 extension LoginPresenter: LoginPresenterProtocol {
     func loginUser(email: String, password: String) {
+        view?.showLoader()
         interactor.loginUser(email: email, password: password) { [weak self] result in
+            self?.view?.hideLoader()
             switch result {
             case .success(_):
                 self?.coordinatorOutput(.goToHomeFlow)

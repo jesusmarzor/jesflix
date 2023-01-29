@@ -39,6 +39,7 @@
 		60FB836F2986E29A00F99D4C /* JesflixCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60FB836D2986E29A00F99D4C /* JesflixCoreData.xcdatamodeld */; };
 		60FB83712986E30600F99D4C /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB83702986E30600F99D4C /* CoreData.swift */; };
 		60FB837929872C6A00F99D4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60FB837829872C6A00F99D4C /* GoogleService-Info.plist */; };
+		60FB837C29872E3500F99D4C /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB837B29872E3500F99D4C /* UIViewController+Extensions.swift */; };
 		8D43318DB99F69095338E031 /* Pods_Jesflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5738AAD43404D8F8F236E020 /* Pods_Jesflix.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		60FB836E2986E29A00F99D4C /* JesflixCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JesflixCoreData.xcdatamodel; sourceTree = "<group>"; };
 		60FB83702986E30600F99D4C /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		60FB837829872C6A00F99D4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		60FB837B29872E3500F99D4C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		C9426A5CC3B56D5C1F82F410 /* Pods-Jesflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jesflix.release.xcconfig"; path = "Target Support Files/Pods-Jesflix/Pods-Jesflix.release.xcconfig"; sourceTree = "<group>"; };
 		CB7917AC5AE2C0FBD0ED54CA /* Pods-Jesflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jesflix.debug.xcconfig"; path = "Target Support Files/Pods-Jesflix/Pods-Jesflix.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +124,7 @@
 				6016C676297DE28C0046935A /* UIColor+Extensions.swift */,
 				6016C678297DEB320046935A /* UIFont+Extensions.swift */,
 				604367C2297F3C6C006D9D6B /* String+Extensions.swift */,
+				60FB837B29872E3500F99D4C /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				6016C674297DE10C0046935A /* Colors.swift in Sources */,
 				605C7087297D643900249F0B /* LoginInteractor.swift in Sources */,
 				605C7082297D643900249F0B /* LoginPresenter.swift in Sources */,
+				60FB837C29872E3500F99D4C /* UIViewController+Extensions.swift in Sources */,
 				605C7089297D643900249F0B /* LoginOutput.swift in Sources */,
 				605C7083297D643900249F0B /* LoginViewControllerProtocol.swift in Sources */,
 				605C7084297D643900249F0B /* LoginPresenterProtocol.swift in Sources */,

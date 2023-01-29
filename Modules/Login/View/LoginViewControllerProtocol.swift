@@ -1,2 +1,2 @@
-protocol LoginViewProtocol: AnyObject {
+protocol LoginViewProtocol: LoaderProtocol {
 }
