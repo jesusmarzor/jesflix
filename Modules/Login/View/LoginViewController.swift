@@ -14,14 +14,23 @@ class LoginViewController: UIViewController {
     
     private lazy var emailTextField: JesflixTextField = {
         let textField = JesflixTextField()
-        textField.configure(placeholder: String.getLabelForKey("common_email"))
+        textField.configure(type: .text, placeholder: String.getLabelForKey("common_email"))
         return textField
     }()
     
     private lazy var passwordTextField: JesflixTextField = {
         let textField = JesflixTextField()
-        textField.configure(placeholder: String.getLabelForKey("common_password"))
+        textField.configure(type: .password, placeholder: String.getLabelForKey("common_password"))
         return textField
+    }() 
+    
+    private lazy var loginButton: UIButton = {
+        let button = UIButton()
+        button.setTitle(String.getLabelForKey("common_login"), for: .normal)
+        button.backgroundColor = UIColor.theme(.redDark)
+        button.tintColor = UIColor.theme(.white)
+        button.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
+        return button
     }()
 
     init (presenter: LoginPresenterProtocol) {
@@ -39,6 +48,7 @@ class LoginViewController: UIViewController {
         setUpTitleLabel()
         setUpEmailTextField()
         setUpPasswordTextField()
+        setUpLoginButton()
     }
 
     private func setUpTitleLabel() {
@@ -63,6 +73,21 @@ class LoginViewController: UIViewController {
         passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 16).isActive = true
         passwordTextField.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor, constant: 16).isActive = true
         passwordTextField.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: -16).isActive = true
+    }
+    
+    private func setUpLoginButton() {
+        self.view.addSubview(loginButton)
+        loginButton.translatesAutoresizingMaskIntoConstraints = false
+        loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 16).isActive = true
+        loginButton.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor, constant: 16).isActive = true
+        loginButton.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: -16).isActive = true
+    }
+    
+    @objc
+    private func didTapLoginButton() {
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            presenter.loginUser(email: email, password: password)
+        }
     }
 }
 

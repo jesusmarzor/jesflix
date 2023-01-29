@@ -1,7 +1,7 @@
 import UIKit
 
 class JesflixTextField: UITextField {
-    func configure(placeholder: String) {
+    func configure(type: TextFieldType, placeholder: String) {
         self.placeholder = placeholder
         self.translatesAutoresizingMaskIntoConstraints = false
         self.heightAnchor.constraint(equalToConstant: 48).isActive = true
@@ -13,5 +13,12 @@ class JesflixTextField: UITextField {
         self.leftViewMode = .always
         self.rightView = paddingView
         self.rightViewMode = .always
+        self.autocapitalizationType = .none
+        self.isSecureTextEntry = (type == .password)
     }
+}
+
+enum TextFieldType {
+    case text
+    case password
 }

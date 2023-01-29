@@ -35,7 +35,12 @@ class AppCoordinator {
     }
 
     private func goToLoginFlow() {
-        let vc = LoginBuilder {_ in}.build()
+        let vc = LoginBuilder {output in
+            switch output {
+            case .goToHomeFlow:
+                break
+            }
+        }.build()
         navigator.pushViewController(vc, animated: true)
     }
 }

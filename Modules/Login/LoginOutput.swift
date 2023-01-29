@@ -1,2 +1,3 @@
 enum LoginOutput {
+    case goToHomeFlow
 }
