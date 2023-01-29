@@ -40,6 +40,17 @@
 		60FB83712986E30600F99D4C /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB83702986E30600F99D4C /* CoreData.swift */; };
 		60FB837929872C6A00F99D4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60FB837829872C6A00F99D4C /* GoogleService-Info.plist */; };
 		60FB837C29872E3500F99D4C /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB837B29872E3500F99D4C /* UIViewController+Extensions.swift */; };
+		60FB8388298734C600F99D4C /* HomeInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB837E298734C600F99D4C /* HomeInteractorProtocol.swift */; };
+		60FB8389298734C600F99D4C /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB837F298734C600F99D4C /* HomePresenter.swift */; };
+		60FB838A298734C600F99D4C /* HomeViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB8380298734C600F99D4C /* HomeViewControllerProtocol.swift */; };
+		60FB838B298734C600F99D4C /* HomePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB8381298734C600F99D4C /* HomePresenterProtocol.swift */; };
+		60FB838C298734C600F99D4C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB8382298734C600F99D4C /* HomeViewController.swift */; };
+		60FB838D298734C600F99D4C /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB8383298734C600F99D4C /* HomeBuilder.swift */; };
+		60FB838E298734C600F99D4C /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB8384298734C600F99D4C /* HomeInteractor.swift */; };
+		60FB838F298734C600F99D4C /* HomeDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB8385298734C600F99D4C /* HomeDataManagerProtocol.swift */; };
+		60FB8390298734C600F99D4C /* HomeOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB8386298734C600F99D4C /* HomeOutput.swift */; };
+		60FB8391298734C600F99D4C /* HomeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB8387298734C600F99D4C /* HomeDataManager.swift */; };
+		60FB83982987353600F99D4C /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB83972987353600F99D4C /* HomeCoordinator.swift */; };
 		8D43318DB99F69095338E031 /* Pods_Jesflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5738AAD43404D8F8F236E020 /* Pods_Jesflix.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +96,17 @@
 		60FB83702986E30600F99D4C /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		60FB837829872C6A00F99D4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		60FB837B29872E3500F99D4C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		60FB837E298734C600F99D4C /* HomeInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorProtocol.swift; sourceTree = "<group>"; };
+		60FB837F298734C600F99D4C /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		60FB8380298734C600F99D4C /* HomeViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerProtocol.swift; sourceTree = "<group>"; };
+		60FB8381298734C600F99D4C /* HomePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterProtocol.swift; sourceTree = "<group>"; };
+		60FB8382298734C600F99D4C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		60FB8383298734C600F99D4C /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		60FB8384298734C600F99D4C /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		60FB8385298734C600F99D4C /* HomeDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataManagerProtocol.swift; sourceTree = "<group>"; };
+		60FB8386298734C600F99D4C /* HomeOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOutput.swift; sourceTree = "<group>"; };
+		60FB8387298734C600F99D4C /* HomeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataManager.swift; sourceTree = "<group>"; };
+		60FB83972987353600F99D4C /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		C9426A5CC3B56D5C1F82F410 /* Pods-Jesflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jesflix.release.xcconfig"; path = "Target Support Files/Pods-Jesflix/Pods-Jesflix.release.xcconfig"; sourceTree = "<group>"; };
 		CB7917AC5AE2C0FBD0ED54CA /* Pods-Jesflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jesflix.debug.xcconfig"; path = "Target Support Files/Pods-Jesflix/Pods-Jesflix.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				605C7073297D63C500249F0B /* AppCoordinator.swift */,
+				60FB83972987353600F99D4C /* HomeCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -188,6 +211,7 @@
 		605C7075297D641200249F0B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				60FB837D298734B000F99D4C /* Home */,
 				605C7076297D641800249F0B /* Login */,
 			);
 			path = Modules;
@@ -279,6 +303,55 @@
 				60FB83702986E30600F99D4C /* CoreData.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		60FB837D298734B000F99D4C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				60FB8395298734F400F99D4C /* DataManager */,
+				60FB8394298734D900F99D4C /* View */,
+				60FB8393298734D300F99D4C /* Interactor */,
+				60FB8392298734CB00F99D4C /* Presenter */,
+				60FB8383298734C600F99D4C /* HomeBuilder.swift */,
+				60FB8386298734C600F99D4C /* HomeOutput.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		60FB8392298734CB00F99D4C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				60FB837F298734C600F99D4C /* HomePresenter.swift */,
+				60FB8381298734C600F99D4C /* HomePresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		60FB8393298734D300F99D4C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				60FB837E298734C600F99D4C /* HomeInteractorProtocol.swift */,
+				60FB8384298734C600F99D4C /* HomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		60FB8394298734D900F99D4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				60FB8380298734C600F99D4C /* HomeViewControllerProtocol.swift */,
+				60FB8382298734C600F99D4C /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60FB8395298734F400F99D4C /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				60FB8385298734C600F99D4C /* HomeDataManagerProtocol.swift */,
+				60FB8387298734C600F99D4C /* HomeDataManager.swift */,
+			);
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 		A3835D61A356DB8D46CCB30C /* Frameworks */ = {
@@ -432,14 +505,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				605C7085297D643900249F0B /* LoginViewController.swift in Sources */,
+				60FB838B298734C600F99D4C /* HomePresenterProtocol.swift in Sources */,
 				6016C674297DE10C0046935A /* Colors.swift in Sources */,
 				605C7087297D643900249F0B /* LoginInteractor.swift in Sources */,
 				605C7082297D643900249F0B /* LoginPresenter.swift in Sources */,
 				60FB837C29872E3500F99D4C /* UIViewController+Extensions.swift in Sources */,
 				605C7089297D643900249F0B /* LoginOutput.swift in Sources */,
 				605C7083297D643900249F0B /* LoginViewControllerProtocol.swift in Sources */,
+				60FB8391298734C600F99D4C /* HomeDataManager.swift in Sources */,
+				60FB838F298734C600F99D4C /* HomeDataManagerProtocol.swift in Sources */,
 				605C7084297D643900249F0B /* LoginPresenterProtocol.swift in Sources */,
+				60FB8390298734C600F99D4C /* HomeOutput.swift in Sources */,
+				60FB83982987353600F99D4C /* HomeCoordinator.swift in Sources */,
+				60FB838A298734C600F99D4C /* HomeViewControllerProtocol.swift in Sources */,
+				60FB838E298734C600F99D4C /* HomeInteractor.swift in Sources */,
 				605C7088297D643900249F0B /* LoginDataManagerProtocol.swift in Sources */,
+				60FB8389298734C600F99D4C /* HomePresenter.swift in Sources */,
+				60FB838D298734C600F99D4C /* HomeBuilder.swift in Sources */,
 				605C7081297D643900249F0B /* LoginInteractorProtocol.swift in Sources */,
 				605C7074297D63C500249F0B /* AppCoordinator.swift in Sources */,
 				605C705C297D630000249F0B /* ViewController.swift in Sources */,
@@ -447,6 +529,7 @@
 				605C7086297D643900249F0B /* LoginBuilder.swift in Sources */,
 				604367C3297F3C6C006D9D6B /* String+Extensions.swift in Sources */,
 				605C7058297D630000249F0B /* AppDelegate.swift in Sources */,
+				60FB838C298734C600F99D4C /* HomeViewController.swift in Sources */,
 				604367DC297F43E2006D9D6B /* JesflixTextField.swift in Sources */,
 				60FB836F2986E29A00F99D4C /* JesflixCoreData.xcdatamodeld in Sources */,
 				6016C679297DEB320046935A /* UIFont+Extensions.swift in Sources */,
@@ -455,6 +538,7 @@
 				605C708A297D643900249F0B /* LoginDataManager.swift in Sources */,
 				60FB83712986E30600F99D4C /* CoreData.swift in Sources */,
 				60FB83692986DD9F00F99D4C /* DtoUser.swift in Sources */,
+				60FB8388298734C600F99D4C /* HomeInteractorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
