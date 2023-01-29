@@ -35,7 +35,6 @@
 		605C709B297D691700249F0B /* Amaranth-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 605C7096297D683000249F0B /* Amaranth-BoldItalic.ttf */; };
 		605C709C297D691A00249F0B /* Amaranth-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 605C7097297D683100249F0B /* Amaranth-Italic.ttf */; };
 		605C709D297D691C00249F0B /* Amaranth-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 605C7098297D683A00249F0B /* Amaranth-Regular.ttf */; };
-		60FB83652986CEF800F99D4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60FB83642986CEF800F99D4C /* GoogleService-Info.plist */; };
 		60FB83692986DD9F00F99D4C /* DtoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB83682986DD9F00F99D4C /* DtoUser.swift */; };
 		60FB836F2986E29A00F99D4C /* JesflixCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60FB836D2986E29A00F99D4C /* JesflixCoreData.xcdatamodeld */; };
 		60FB83712986E30600F99D4C /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB83702986E30600F99D4C /* CoreData.swift */; };
@@ -79,7 +78,6 @@
 		605C7096297D683000249F0B /* Amaranth-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-BoldItalic.ttf"; sourceTree = "<group>"; };
 		605C7097297D683100249F0B /* Amaranth-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Italic.ttf"; sourceTree = "<group>"; };
 		605C7098297D683A00249F0B /* Amaranth-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Regular.ttf"; sourceTree = "<group>"; };
-		60FB83642986CEF800F99D4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		60FB83682986DD9F00F99D4C /* DtoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoUser.swift; sourceTree = "<group>"; };
 		60FB836E2986E29A00F99D4C /* JesflixCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JesflixCoreData.xcdatamodel; sourceTree = "<group>"; };
 		60FB83702986E30600F99D4C /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
@@ -138,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				60FB83672986DD8A00F99D4C /* Data */,
-				60FB83642986CEF800F99D4C /* GoogleService-Info.plist */,
 				604367DA297F43BE006D9D6B /* Components */,
 				604367D8297F4215006D9D6B /* Localizable.strings */,
 				6016C672297DE0E60046935A /* Utils */,
@@ -350,7 +347,6 @@
 			files = (
 				605C709C297D691A00249F0B /* Amaranth-Italic.ttf in Resources */,
 				605C709B297D691700249F0B /* Amaranth-BoldItalic.ttf in Resources */,
-				60FB83652986CEF800F99D4C /* GoogleService-Info.plist in Resources */,
 				605C7064297D630200249F0B /* LaunchScreen.storyboard in Resources */,
 				605C7061297D630200249F0B /* Assets.xcassets in Resources */,
 				605C709D297D691C00249F0B /* Amaranth-Regular.ttf in Resources */,
