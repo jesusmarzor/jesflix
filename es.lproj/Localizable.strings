@@ -2,3 +2,8 @@
 "common_email" = "Email";
 "common_password" = "Contraseña";
 "common_home" = "Inicio";
+"common_ok" = "Ok";
+"common_error" = "Error";
+
+"error_wrong_password" = "Contraseña incorrecta";
+"error_common" = "Ha ocurrido un problema";

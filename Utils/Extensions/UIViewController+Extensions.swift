@@ -25,3 +25,17 @@ extension UIViewController {
         }
     }
 }
+
+protocol HandleErrorProtocol {
+    func handleError(_ error: JesflixError)
+}
+
+extension UIViewController {
+    func handleError(_ error: JesflixError) {
+        let message = String.getLabelForError(error)
+        let alert = UIAlertController(title: String.getLabelForKey("common_error"), message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: String.getLabelForKey("common_ok"), style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+}

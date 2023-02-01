@@ -19,8 +19,8 @@ extension LoginPresenter: LoginPresenterProtocol {
             case .success(_):
                 self?.coordinatorOutput(.goToHomeFlow)
 
-            case .failure(_):
-                break
+            case .failure(let error):
+                self?.view?.handleError(error)
             }
         }
     }

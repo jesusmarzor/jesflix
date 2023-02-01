@@ -1,2 +1,2 @@
-protocol LoginViewProtocol: LoaderProtocol {
+protocol LoginViewProtocol: LoaderProtocol, HandleErrorProtocol {
 }

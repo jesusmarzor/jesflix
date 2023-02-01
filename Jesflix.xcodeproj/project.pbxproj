@@ -35,6 +35,7 @@
 		605C709B297D691700249F0B /* Amaranth-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 605C7096297D683000249F0B /* Amaranth-BoldItalic.ttf */; };
 		605C709C297D691A00249F0B /* Amaranth-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 605C7097297D683100249F0B /* Amaranth-Italic.ttf */; };
 		605C709D297D691C00249F0B /* Amaranth-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 605C7098297D683A00249F0B /* Amaranth-Regular.ttf */; };
+		60DB5963298B0043004ACFBE /* JesflixErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB5962298B0043004ACFBE /* JesflixErrors.swift */; };
 		60FB83692986DD9F00F99D4C /* DtoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB83682986DD9F00F99D4C /* DtoUser.swift */; };
 		60FB836F2986E29A00F99D4C /* JesflixCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60FB836D2986E29A00F99D4C /* JesflixCoreData.xcdatamodeld */; };
 		60FB83712986E30600F99D4C /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB83702986E30600F99D4C /* CoreData.swift */; };
@@ -91,6 +92,7 @@
 		605C7096297D683000249F0B /* Amaranth-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-BoldItalic.ttf"; sourceTree = "<group>"; };
 		605C7097297D683100249F0B /* Amaranth-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Italic.ttf"; sourceTree = "<group>"; };
 		605C7098297D683A00249F0B /* Amaranth-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Regular.ttf"; sourceTree = "<group>"; };
+		60DB5962298B0043004ACFBE /* JesflixErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JesflixErrors.swift; sourceTree = "<group>"; };
 		60FB83682986DD9F00F99D4C /* DtoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoUser.swift; sourceTree = "<group>"; };
 		60FB836E2986E29A00F99D4C /* JesflixCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JesflixCoreData.xcdatamodel; sourceTree = "<group>"; };
 		60FB83702986E30600F99D4C /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				6016C675297DE27F0046935A /* Extensions */,
+				60DB5962298B0043004ACFBE /* JesflixErrors.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				605C7085297D643900249F0B /* LoginViewController.swift in Sources */,
+				60DB5963298B0043004ACFBE /* JesflixErrors.swift in Sources */,
 				60FB838B298734C600F99D4C /* HomePresenterProtocol.swift in Sources */,
 				6016C674297DE10C0046935A /* Colors.swift in Sources */,
 				605C7087297D643900249F0B /* LoginInteractor.swift in Sources */,

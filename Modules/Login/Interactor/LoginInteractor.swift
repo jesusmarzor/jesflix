@@ -12,7 +12,7 @@ class LoginInteractor {
 }
 
 extension LoginInteractor: LoginInteractorProtocol {
-    func loginUser(email: String, password: String, completion: @escaping (Result<Bool, Error>) -> Void) {
+    func loginUser(email: String, password: String, completion: @escaping (Result<Bool, JesflixError>) -> Void) {
         dataManager.loginUser(email: email, password: password) { [weak self] result in
             switch result {
             case .success(let user):
