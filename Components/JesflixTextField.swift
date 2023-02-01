@@ -1,10 +1,8 @@
 import UIKit
 
 class JesflixTextField: UITextField {
-    func configure(type: TextFieldType, placeholder: String) {
+    func configure(type: JesflixTextFieldType, heightSize: JesflixHeightSize, placeholder: String) {
         self.placeholder = placeholder
-        self.translatesAutoresizingMaskIntoConstraints = false
-        self.heightAnchor.constraint(equalToConstant: 48).isActive = true
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.theme(.gray).cgColor
         self.layer.cornerRadius = 5
@@ -15,10 +13,16 @@ class JesflixTextField: UITextField {
         self.rightViewMode = .always
         self.autocapitalizationType = .none
         self.isSecureTextEntry = (type == .password)
+        setUpHeightButton(heightSize.rawValue)
+    }
+    
+    func setUpHeightButton(_ height: CGFloat) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.heightAnchor.constraint(equalToConstant: height).isActive = true
     }
 }
 
-enum TextFieldType {
+enum JesflixTextFieldType {
     case text
     case password
 }

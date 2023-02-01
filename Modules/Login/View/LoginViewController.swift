@@ -14,22 +14,19 @@ class LoginViewController: UIViewController {
     
     private lazy var emailTextField: JesflixTextField = {
         let textField = JesflixTextField()
-        textField.configure(type: .text, placeholder: String.getLabelForKey("common_email"))
+        textField.configure(type: .text, heightSize: .L, placeholder: String.getLabelForKey("common_email"))
         return textField
     }()
     
     private lazy var passwordTextField: JesflixTextField = {
         let textField = JesflixTextField()
-        textField.configure(type: .password, placeholder: String.getLabelForKey("common_password"))
+        textField.configure(type: .password, heightSize: .L, placeholder: String.getLabelForKey("common_password"))
         return textField
     }() 
     
-    private lazy var loginButton: UIButton = {
-        let button = UIButton()
-        button.setTitle(String.getLabelForKey("common_login"), for: .normal)
-        button.backgroundColor = UIColor.theme(.redDark)
-        button.tintColor = UIColor.theme(.white)
-        button.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
+    private lazy var loginButton: JesflixButton = {
+        let button = JesflixButton()
+        button.configure(heightSize: .L, text: String.getLabelForKey("common_login"), target: self, action: #selector(didTapLoginButton))
         return button
     }()
 
@@ -62,25 +59,25 @@ class LoginViewController: UIViewController {
     private func setUpEmailTextField() {
         self.view.addSubview(emailTextField)
         emailTextField.translatesAutoresizingMaskIntoConstraints = false
-        emailTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16).isActive = true
-        emailTextField.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor, constant: 16).isActive = true
-        emailTextField.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: -16).isActive = true
+        emailTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: JesflixSize.marginS.rawValue).isActive = true
+        emailTextField.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: JesflixSize.marginS.rawValue).isActive = true
+        emailTextField.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -JesflixSize.marginS.rawValue).isActive = true
     }
     
     private func setUpPasswordTextField() {
         self.view.addSubview(passwordTextField)
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
-        passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 16).isActive = true
-        passwordTextField.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor, constant: 16).isActive = true
-        passwordTextField.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: -16).isActive = true
+        passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: JesflixSize.marginS.rawValue).isActive = true
+        passwordTextField.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: JesflixSize.marginS.rawValue).isActive = true
+        passwordTextField.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -JesflixSize.marginS.rawValue).isActive = true
     }
     
     private func setUpLoginButton() {
         self.view.addSubview(loginButton)
         loginButton.translatesAutoresizingMaskIntoConstraints = false
-        loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 16).isActive = true
-        loginButton.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor, constant: 16).isActive = true
-        loginButton.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: -16).isActive = true
+        loginButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -JesflixSize.marginL.rawValue).isActive = true
+        loginButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: JesflixSize.marginS.rawValue).isActive = true
+        loginButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -JesflixSize.marginS.rawValue).isActive = true
     }
     
     @objc

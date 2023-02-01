@@ -36,6 +36,9 @@
 		605C709C297D691A00249F0B /* Amaranth-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 605C7097297D683100249F0B /* Amaranth-Italic.ttf */; };
 		605C709D297D691C00249F0B /* Amaranth-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 605C7098297D683A00249F0B /* Amaranth-Regular.ttf */; };
 		60DB5963298B0043004ACFBE /* JesflixErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB5962298B0043004ACFBE /* JesflixErrors.swift */; };
+		60DB5965298B16E7004ACFBE /* JesflixButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB5964298B16E7004ACFBE /* JesflixButton.swift */; };
+		60DB5967298B1AEE004ACFBE /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB5966298B1AEE004ACFBE /* UIView+Extensions.swift */; };
+		60DB5969298B1D68004ACFBE /* JesflixSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB5968298B1D68004ACFBE /* JesflixSizes.swift */; };
 		60FB83692986DD9F00F99D4C /* DtoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB83682986DD9F00F99D4C /* DtoUser.swift */; };
 		60FB836F2986E29A00F99D4C /* JesflixCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60FB836D2986E29A00F99D4C /* JesflixCoreData.xcdatamodeld */; };
 		60FB83712986E30600F99D4C /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB83702986E30600F99D4C /* CoreData.swift */; };
@@ -93,6 +96,9 @@
 		605C7097297D683100249F0B /* Amaranth-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Italic.ttf"; sourceTree = "<group>"; };
 		605C7098297D683A00249F0B /* Amaranth-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Regular.ttf"; sourceTree = "<group>"; };
 		60DB5962298B0043004ACFBE /* JesflixErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JesflixErrors.swift; sourceTree = "<group>"; };
+		60DB5964298B16E7004ACFBE /* JesflixButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JesflixButton.swift; sourceTree = "<group>"; };
+		60DB5966298B1AEE004ACFBE /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		60DB5968298B1D68004ACFBE /* JesflixSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JesflixSizes.swift; sourceTree = "<group>"; };
 		60FB83682986DD9F00F99D4C /* DtoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoUser.swift; sourceTree = "<group>"; };
 		60FB836E2986E29A00F99D4C /* JesflixCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JesflixCoreData.xcdatamodel; sourceTree = "<group>"; };
 		60FB83702986E30600F99D4C /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
@@ -139,6 +145,7 @@
 			children = (
 				6016C675297DE27F0046935A /* Extensions */,
 				60DB5962298B0043004ACFBE /* JesflixErrors.swift */,
+				60DB5968298B1D68004ACFBE /* JesflixSizes.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -150,6 +157,7 @@
 				6016C678297DEB320046935A /* UIFont+Extensions.swift */,
 				604367C2297F3C6C006D9D6B /* String+Extensions.swift */,
 				60FB837B29872E3500F99D4C /* UIViewController+Extensions.swift */,
+				60DB5966298B1AEE004ACFBE /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -158,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				604367DB297F43E2006D9D6B /* JesflixTextField.swift */,
+				60DB5964298B16E7004ACFBE /* JesflixButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -519,10 +528,13 @@
 				60FB8391298734C600F99D4C /* HomeDataManager.swift in Sources */,
 				60FB838F298734C600F99D4C /* HomeDataManagerProtocol.swift in Sources */,
 				605C7084297D643900249F0B /* LoginPresenterProtocol.swift in Sources */,
+				60DB5967298B1AEE004ACFBE /* UIView+Extensions.swift in Sources */,
+				60DB5965298B16E7004ACFBE /* JesflixButton.swift in Sources */,
 				60FB8390298734C600F99D4C /* HomeOutput.swift in Sources */,
 				60FB83982987353600F99D4C /* HomeCoordinator.swift in Sources */,
 				60FB838A298734C600F99D4C /* HomeViewControllerProtocol.swift in Sources */,
 				60FB838E298734C600F99D4C /* HomeInteractor.swift in Sources */,
+				60DB5969298B1D68004ACFBE /* JesflixSizes.swift in Sources */,
 				605C7088297D643900249F0B /* LoginDataManagerProtocol.swift in Sources */,
 				60FB8389298734C600F99D4C /* HomePresenter.swift in Sources */,
 				60FB838D298734C600F99D4C /* HomeBuilder.swift in Sources */,
