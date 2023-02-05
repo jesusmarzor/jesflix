@@ -1,2 +1,3 @@
-protocol HomeViewProtocol: AnyObject {
+protocol HomeViewProtocol: LoaderProtocol, HandleErrorProtocol {
+    func updateEntertainmentSections(with entertainmentSection: DtoEntertainmentSection)
 }

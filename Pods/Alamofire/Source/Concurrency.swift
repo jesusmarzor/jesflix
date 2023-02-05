@@ -254,7 +254,7 @@ extension DataRequest {
     /// - Returns: The `DataTask`.
     public func serializingResponse<Serializer: ResponseSerializer>(using serializer: Serializer,
                                                                     automaticallyCancelling shouldAutomaticallyCancel: Bool = false)
-    -> DataTask<Serializer.SerializedObject> {
+        -> DataTask<Serializer.SerializedObject> {
         dataTask(automaticallyCancelling: shouldAutomaticallyCancel) {
             self.response(queue: .singleEventQueue,
                           responseSerializer: serializer,
@@ -274,7 +274,7 @@ extension DataRequest {
     /// - Returns: The `DataTask`.
     public func serializingResponse<Serializer: DataResponseSerializerProtocol>(using serializer: Serializer,
                                                                                 automaticallyCancelling shouldAutomaticallyCancel: Bool = false)
-    -> DataTask<Serializer.SerializedObject> {
+        -> DataTask<Serializer.SerializedObject> {
         dataTask(automaticallyCancelling: shouldAutomaticallyCancel) {
             self.response(queue: .singleEventQueue,
                           responseSerializer: serializer,
@@ -284,7 +284,7 @@ extension DataRequest {
 
     private func dataTask<Value>(automaticallyCancelling shouldAutomaticallyCancel: Bool,
                                  forResponse onResponse: @escaping (@escaping (DataResponse<Value, AFError>) -> Void) -> Void)
-    -> DataTask<Value> {
+        -> DataTask<Value> {
         let task = Task {
             await withTaskCancellationHandler {
                 await withCheckedContinuation { continuation in
@@ -462,7 +462,7 @@ extension DownloadRequest {
     /// - Returns: The `DownloadTask`.
     public func serializingDownload<Serializer: ResponseSerializer>(using serializer: Serializer,
                                                                     automaticallyCancelling shouldAutomaticallyCancel: Bool = false)
-    -> DownloadTask<Serializer.SerializedObject> {
+        -> DownloadTask<Serializer.SerializedObject> {
         downloadTask(automaticallyCancelling: shouldAutomaticallyCancel) {
             self.response(queue: .singleEventQueue,
                           responseSerializer: serializer,
@@ -483,7 +483,7 @@ extension DownloadRequest {
     /// - Returns: The `DownloadTask`.
     public func serializingDownload<Serializer: DownloadResponseSerializerProtocol>(using serializer: Serializer,
                                                                                     automaticallyCancelling shouldAutomaticallyCancel: Bool = false)
-    -> DownloadTask<Serializer.SerializedObject> {
+        -> DownloadTask<Serializer.SerializedObject> {
         downloadTask(automaticallyCancelling: shouldAutomaticallyCancel) {
             self.response(queue: .singleEventQueue,
                           responseSerializer: serializer,
@@ -493,7 +493,7 @@ extension DownloadRequest {
 
     private func downloadTask<Value>(automaticallyCancelling shouldAutomaticallyCancel: Bool,
                                      forResponse onResponse: @escaping (@escaping (DownloadResponse<Value, AFError>) -> Void) -> Void)
-    -> DownloadTask<Value> {
+        -> DownloadTask<Value> {
         let task = Task {
             await withTaskCancellationHandler {
                 await withCheckedContinuation { continuation in
@@ -562,7 +562,7 @@ public struct DataStreamTask {
     public func streamingDecodables<T>(_ type: T.Type = T.self,
                                        automaticallyCancelling shouldAutomaticallyCancel: Bool = true,
                                        bufferingPolicy: Stream<T, AFError>.BufferingPolicy = .unbounded)
-    -> Stream<T, AFError> where T: Decodable {
+        -> Stream<T, AFError> where T: Decodable {
         streamingResponses(serializedUsing: DecodableStreamSerializer<T>(),
                            automaticallyCancelling: shouldAutomaticallyCancel,
                            bufferingPolicy: bufferingPolicy)
@@ -580,7 +580,7 @@ public struct DataStreamTask {
     public func streamingResponses<Serializer: DataStreamSerializer>(serializedUsing serializer: Serializer,
                                                                      automaticallyCancelling shouldAutomaticallyCancel: Bool = true,
                                                                      bufferingPolicy: Stream<Serializer.SerializedObject, AFError>.BufferingPolicy = .unbounded)
-    -> Stream<Serializer.SerializedObject, AFError> {
+        -> Stream<Serializer.SerializedObject, AFError> {
         createStream(automaticallyCancelling: shouldAutomaticallyCancel, bufferingPolicy: bufferingPolicy) { onStream in
             self.request.responseStream(using: serializer,
                                         on: .streamCompletionQueue(forRequestID: request.id),
@@ -591,7 +591,7 @@ public struct DataStreamTask {
     private func createStream<Success, Failure: Error>(automaticallyCancelling shouldAutomaticallyCancel: Bool = true,
                                                        bufferingPolicy: Stream<Success, Failure>.BufferingPolicy = .unbounded,
                                                        forResponse onResponse: @escaping (@escaping (DataStreamRequest.Stream<Success, Failure>) -> Void) -> Void)
-    -> Stream<Success, Failure> {
+        -> Stream<Success, Failure> {
         StreamOf(bufferingPolicy: bufferingPolicy) {
             guard shouldAutomaticallyCancel,
                   request.isInitialized || request.isResumed || request.isSuspended else { return }

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		600AA11F298EB14E0099A931 /* ServiceProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600AA11E298EB14E0099A931 /* ServiceProxy.swift */; };
+		600AA122298EB2780099A931 /* JesflixEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600AA121298EB2780099A931 /* JesflixEnvironment.swift */; };
+		600AA124298EBAD00099A931 /* DtoMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600AA123298EBAD00099A931 /* DtoMovie.swift */; };
+		600AA129298EC4EF0099A931 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600AA128298EC4EF0099A931 /* EndPoints.swift */; };
+		600AA12B298ECE4A0099A931 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600AA12A298ECE4A0099A931 /* UIImageView+Extensions.swift */; };
+		600AA132298EFEAF0099A931 /* CollectionViewMoviesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600AA131298EFEAF0099A931 /* CollectionViewMoviesCell.swift */; };
+		600AA134298F05F90099A931 /* HeroHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600AA133298F05F90099A931 /* HeroHeader.swift */; };
 		6016C674297DE10C0046935A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6016C673297DE10C0046935A /* Colors.swift */; };
 		6016C677297DE28C0046935A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6016C676297DE28C0046935A /* UIColor+Extensions.swift */; };
 		6016C679297DEB320046935A /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6016C678297DEB320046935A /* UIFont+Extensions.swift */; };
@@ -35,9 +42,13 @@
 		605C709B297D691700249F0B /* Amaranth-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 605C7096297D683000249F0B /* Amaranth-BoldItalic.ttf */; };
 		605C709C297D691A00249F0B /* Amaranth-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 605C7097297D683100249F0B /* Amaranth-Italic.ttf */; };
 		605C709D297D691C00249F0B /* Amaranth-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 605C7098297D683A00249F0B /* Amaranth-Regular.ttf */; };
+		606728C6298FB2A100C6A069 /* CollectionViewMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606728C5298FB2A100C6A069 /* CollectionViewMovieCell.swift */; };
+		606728CA298FD24200C6A069 /* DtoSerie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606728C9298FD24200C6A069 /* DtoSerie.swift */; };
+		606728D1298FF61900C6A069 /* DtoGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606728D0298FF61900C6A069 /* DtoGenre.swift */; };
+		606728D3298FF65800C6A069 /* DtoEntertainmentPagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606728D2298FF65800C6A069 /* DtoEntertainmentPagination.swift */; };
+		606728D5298FFD8F00C6A069 /* DtoEntertainmentMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606728D4298FFD8F00C6A069 /* DtoEntertainmentMedia.swift */; };
 		60DB5963298B0043004ACFBE /* JesflixErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB5962298B0043004ACFBE /* JesflixErrors.swift */; };
 		60DB5965298B16E7004ACFBE /* JesflixButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB5964298B16E7004ACFBE /* JesflixButton.swift */; };
-		60DB5967298B1AEE004ACFBE /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB5966298B1AEE004ACFBE /* UIView+Extensions.swift */; };
 		60DB5969298B1D68004ACFBE /* JesflixSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB5968298B1D68004ACFBE /* JesflixSizes.swift */; };
 		60FB83692986DD9F00F99D4C /* DtoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FB83682986DD9F00F99D4C /* DtoUser.swift */; };
 		60FB836F2986E29A00F99D4C /* JesflixCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60FB836D2986E29A00F99D4C /* JesflixCoreData.xcdatamodeld */; };
@@ -60,6 +71,13 @@
 
 /* Begin PBXFileReference section */
 		5738AAD43404D8F8F236E020 /* Pods_Jesflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jesflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		600AA11E298EB14E0099A931 /* ServiceProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProxy.swift; sourceTree = "<group>"; };
+		600AA121298EB2780099A931 /* JesflixEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JesflixEnvironment.swift; sourceTree = "<group>"; };
+		600AA123298EBAD00099A931 /* DtoMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoMovie.swift; sourceTree = "<group>"; };
+		600AA128298EC4EF0099A931 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		600AA12A298ECE4A0099A931 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		600AA131298EFEAF0099A931 /* CollectionViewMoviesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewMoviesCell.swift; sourceTree = "<group>"; };
+		600AA133298F05F90099A931 /* HeroHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeader.swift; sourceTree = "<group>"; };
 		6016C673297DE10C0046935A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		6016C676297DE28C0046935A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		6016C678297DEB320046935A /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
@@ -95,9 +113,13 @@
 		605C7096297D683000249F0B /* Amaranth-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-BoldItalic.ttf"; sourceTree = "<group>"; };
 		605C7097297D683100249F0B /* Amaranth-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Italic.ttf"; sourceTree = "<group>"; };
 		605C7098297D683A00249F0B /* Amaranth-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Regular.ttf"; sourceTree = "<group>"; };
+		606728C5298FB2A100C6A069 /* CollectionViewMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewMovieCell.swift; sourceTree = "<group>"; };
+		606728C9298FD24200C6A069 /* DtoSerie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoSerie.swift; sourceTree = "<group>"; };
+		606728D0298FF61900C6A069 /* DtoGenre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoGenre.swift; sourceTree = "<group>"; };
+		606728D2298FF65800C6A069 /* DtoEntertainmentPagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoEntertainmentPagination.swift; sourceTree = "<group>"; };
+		606728D4298FFD8F00C6A069 /* DtoEntertainmentMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoEntertainmentMedia.swift; sourceTree = "<group>"; };
 		60DB5962298B0043004ACFBE /* JesflixErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JesflixErrors.swift; sourceTree = "<group>"; };
 		60DB5964298B16E7004ACFBE /* JesflixButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JesflixButton.swift; sourceTree = "<group>"; };
-		60DB5966298B1AEE004ACFBE /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		60DB5968298B1D68004ACFBE /* JesflixSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JesflixSizes.swift; sourceTree = "<group>"; };
 		60FB83682986DD9F00F99D4C /* DtoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoUser.swift; sourceTree = "<group>"; };
 		60FB836E2986E29A00F99D4C /* JesflixCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JesflixCoreData.xcdatamodel; sourceTree = "<group>"; };
@@ -140,6 +162,63 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		600AA11D298EB13C0099A931 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				600AA125298EBE590099A931 /* Entities */,
+				600AA11E298EB14E0099A931 /* ServiceProxy.swift */,
+				600AA128298EC4EF0099A931 /* EndPoints.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		600AA120298EB21A0099A931 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				600AA121298EB2780099A931 /* JesflixEnvironment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		600AA125298EBE590099A931 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				600AA123298EBAD00099A931 /* DtoMovie.swift */,
+				606728C9298FD24200C6A069 /* DtoSerie.swift */,
+				60FB83682986DD9F00F99D4C /* DtoUser.swift */,
+				606728D2298FF65800C6A069 /* DtoEntertainmentPagination.swift */,
+				606728D0298FF61900C6A069 /* DtoGenre.swift */,
+				606728D4298FFD8F00C6A069 /* DtoEntertainmentMedia.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		600AA12E298EFE7F0099A931 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				604367DB297F43E2006D9D6B /* JesflixTextField.swift */,
+				60DB5964298B16E7004ACFBE /* JesflixButton.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		600AA12F298EFE9A0099A931 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				600AA133298F05F90099A931 /* HeroHeader.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		600AA130298EFEA20099A931 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				600AA131298EFEAF0099A931 /* CollectionViewMoviesCell.swift */,
+				606728C5298FB2A100C6A069 /* CollectionViewMovieCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		6016C672297DE0E60046935A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,7 +236,7 @@
 				6016C678297DEB320046935A /* UIFont+Extensions.swift */,
 				604367C2297F3C6C006D9D6B /* String+Extensions.swift */,
 				60FB837B29872E3500F99D4C /* UIViewController+Extensions.swift */,
-				60DB5966298B1AEE004ACFBE /* UIView+Extensions.swift */,
+				600AA12A298ECE4A0099A931 /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -165,8 +244,9 @@
 		604367DA297F43BE006D9D6B /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				604367DB297F43E2006D9D6B /* JesflixTextField.swift */,
-				60DB5964298B16E7004ACFBE /* JesflixButton.swift */,
+				600AA130298EFEA20099A931 /* cells */,
+				600AA12F298EFE9A0099A931 /* views */,
+				600AA12E298EFE7F0099A931 /* ui */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -174,6 +254,7 @@
 		605C704B297D630000249F0B = {
 			isa = PBXGroup;
 			children = (
+				600AA120298EB21A0099A931 /* Environment */,
 				60FB837829872C6A00F99D4C /* GoogleService-Info.plist */,
 				60FB83672986DD8A00F99D4C /* Data */,
 				604367DA297F43BE006D9D6B /* Components */,
@@ -302,8 +383,8 @@
 		60FB83672986DD8A00F99D4C /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				600AA11D298EB13C0099A931 /* Network */,
 				60FB836A2986E27400F99D4C /* CoreData */,
-				60FB83682986DD9F00F99D4C /* DtoUser.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -321,9 +402,9 @@
 			isa = PBXGroup;
 			children = (
 				60FB8395298734F400F99D4C /* DataManager */,
-				60FB8394298734D900F99D4C /* View */,
 				60FB8393298734D300F99D4C /* Interactor */,
 				60FB8392298734CB00F99D4C /* Presenter */,
+				60FB8394298734D900F99D4C /* View */,
 				60FB8383298734C600F99D4C /* HomeBuilder.swift */,
 				60FB8386298734C600F99D4C /* HomeOutput.swift */,
 			);
@@ -517,10 +598,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				605C7085297D643900249F0B /* LoginViewController.swift in Sources */,
+				600AA124298EBAD00099A931 /* DtoMovie.swift in Sources */,
+				600AA12B298ECE4A0099A931 /* UIImageView+Extensions.swift in Sources */,
 				60DB5963298B0043004ACFBE /* JesflixErrors.swift in Sources */,
 				60FB838B298734C600F99D4C /* HomePresenterProtocol.swift in Sources */,
 				6016C674297DE10C0046935A /* Colors.swift in Sources */,
 				605C7087297D643900249F0B /* LoginInteractor.swift in Sources */,
+				606728D5298FFD8F00C6A069 /* DtoEntertainmentMedia.swift in Sources */,
 				605C7082297D643900249F0B /* LoginPresenter.swift in Sources */,
 				60FB837C29872E3500F99D4C /* UIViewController+Extensions.swift in Sources */,
 				605C7089297D643900249F0B /* LoginOutput.swift in Sources */,
@@ -528,8 +612,10 @@
 				60FB8391298734C600F99D4C /* HomeDataManager.swift in Sources */,
 				60FB838F298734C600F99D4C /* HomeDataManagerProtocol.swift in Sources */,
 				605C7084297D643900249F0B /* LoginPresenterProtocol.swift in Sources */,
-				60DB5967298B1AEE004ACFBE /* UIView+Extensions.swift in Sources */,
+				606728C6298FB2A100C6A069 /* CollectionViewMovieCell.swift in Sources */,
 				60DB5965298B16E7004ACFBE /* JesflixButton.swift in Sources */,
+				600AA132298EFEAF0099A931 /* CollectionViewMoviesCell.swift in Sources */,
+				606728D1298FF61900C6A069 /* DtoGenre.swift in Sources */,
 				60FB8390298734C600F99D4C /* HomeOutput.swift in Sources */,
 				60FB83982987353600F99D4C /* HomeCoordinator.swift in Sources */,
 				60FB838A298734C600F99D4C /* HomeViewControllerProtocol.swift in Sources */,
@@ -538,16 +624,21 @@
 				605C7088297D643900249F0B /* LoginDataManagerProtocol.swift in Sources */,
 				60FB8389298734C600F99D4C /* HomePresenter.swift in Sources */,
 				60FB838D298734C600F99D4C /* HomeBuilder.swift in Sources */,
+				600AA122298EB2780099A931 /* JesflixEnvironment.swift in Sources */,
 				605C7081297D643900249F0B /* LoginInteractorProtocol.swift in Sources */,
+				600AA134298F05F90099A931 /* HeroHeader.swift in Sources */,
 				605C7074297D63C500249F0B /* AppCoordinator.swift in Sources */,
 				605C705C297D630000249F0B /* ViewController.swift in Sources */,
+				600AA129298EC4EF0099A931 /* EndPoints.swift in Sources */,
 				6016C677297DE28C0046935A /* UIColor+Extensions.swift in Sources */,
 				605C7086297D643900249F0B /* LoginBuilder.swift in Sources */,
 				604367C3297F3C6C006D9D6B /* String+Extensions.swift in Sources */,
 				605C7058297D630000249F0B /* AppDelegate.swift in Sources */,
+				600AA11F298EB14E0099A931 /* ServiceProxy.swift in Sources */,
 				60FB838C298734C600F99D4C /* HomeViewController.swift in Sources */,
 				604367DC297F43E2006D9D6B /* JesflixTextField.swift in Sources */,
 				60FB836F2986E29A00F99D4C /* JesflixCoreData.xcdatamodeld in Sources */,
+				606728CA298FD24200C6A069 /* DtoSerie.swift in Sources */,
 				6016C679297DEB320046935A /* UIFont+Extensions.swift in Sources */,
 				605C705A297D630000249F0B /* SceneDelegate.swift in Sources */,
 				6016C67B297DEB890046935A /* Fonts.swift in Sources */,
@@ -555,6 +646,7 @@
 				60FB83712986E30600F99D4C /* CoreData.swift in Sources */,
 				60FB83692986DD9F00F99D4C /* DtoUser.swift in Sources */,
 				60FB8388298734C600F99D4C /* HomeInteractorProtocol.swift in Sources */,
+				606728D3298FF65800C6A069 /* DtoEntertainmentPagination.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

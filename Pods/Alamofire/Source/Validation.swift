@@ -80,8 +80,8 @@ extension Request {
 
     fileprivate func validate<S: Sequence>(statusCode acceptableStatusCodes: S,
                                            response: HTTPURLResponse)
-    -> ValidationResult
-    where S.Iterator.Element == Int {
+        -> ValidationResult
+        where S.Iterator.Element == Int {
         if acceptableStatusCodes.contains(response.statusCode) {
             return .success(())
         } else {
@@ -95,8 +95,8 @@ extension Request {
     fileprivate func validate<S: Sequence>(contentType acceptableContentTypes: S,
                                            response: HTTPURLResponse,
                                            data: Data?)
-    -> ValidationResult
-    where S.Iterator.Element == String {
+        -> ValidationResult
+        where S.Iterator.Element == String {
         guard let data = data, !data.isEmpty else { return .success(()) }
 
         return validate(contentType: acceptableContentTypes, response: response)
@@ -104,8 +104,8 @@ extension Request {
 
     fileprivate func validate<S: Sequence>(contentType acceptableContentTypes: S,
                                            response: HTTPURLResponse)
-    -> ValidationResult
-    where S.Iterator.Element == String {
+        -> ValidationResult
+        where S.Iterator.Element == String {
         guard
             let responseContentType = response.mimeType,
             let responseMIMEType = MIMEType(responseContentType)

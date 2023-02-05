@@ -46,6 +46,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         appCoordinator.start()
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-        window?.overrideUserInterfaceStyle = .light
     }
 }

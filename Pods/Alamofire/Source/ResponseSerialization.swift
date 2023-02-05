@@ -214,7 +214,7 @@ extension DataRequest {
     private func _response<Serializer: DataResponseSerializerProtocol>(queue: DispatchQueue = .main,
                                                                        responseSerializer: Serializer,
                                                                        completionHandler: @escaping (AFDataResponse<Serializer.SerializedObject>) -> Void)
-    -> Self {
+        -> Self {
         appendResponseSerializer {
             // Start work that should be on the serialization queue.
             let start = ProcessInfo.processInfo.systemUptime
@@ -292,7 +292,7 @@ extension DataRequest {
     public func response<Serializer: DataResponseSerializerProtocol>(queue: DispatchQueue = .main,
                                                                      responseSerializer: Serializer,
                                                                      completionHandler: @escaping (AFDataResponse<Serializer.SerializedObject>) -> Void)
-    -> Self {
+        -> Self {
         _response(queue: queue, responseSerializer: responseSerializer, completionHandler: completionHandler)
     }
 
@@ -308,7 +308,7 @@ extension DataRequest {
     public func response<Serializer: ResponseSerializer>(queue: DispatchQueue = .main,
                                                          responseSerializer: Serializer,
                                                          completionHandler: @escaping (AFDataResponse<Serializer.SerializedObject>) -> Void)
-    -> Self {
+        -> Self {
         _response(queue: queue, responseSerializer: responseSerializer, completionHandler: completionHandler)
     }
 }
@@ -324,7 +324,7 @@ extension DownloadRequest {
     @discardableResult
     public func response(queue: DispatchQueue = .main,
                          completionHandler: @escaping (AFDownloadResponse<URL?>) -> Void)
-    -> Self {
+        -> Self {
         appendResponseSerializer {
             // Start work that should be on the serialization queue.
             let result = AFResult<URL?>(value: self.fileURL, error: self.error)
@@ -351,7 +351,7 @@ extension DownloadRequest {
     private func _response<Serializer: DownloadResponseSerializerProtocol>(queue: DispatchQueue = .main,
                                                                            responseSerializer: Serializer,
                                                                            completionHandler: @escaping (AFDownloadResponse<Serializer.SerializedObject>) -> Void)
-    -> Self {
+        -> Self {
         appendResponseSerializer {
             // Start work that should be on the serialization queue.
             let start = ProcessInfo.processInfo.systemUptime
@@ -431,7 +431,7 @@ extension DownloadRequest {
     public func response<Serializer: DownloadResponseSerializerProtocol>(queue: DispatchQueue = .main,
                                                                          responseSerializer: Serializer,
                                                                          completionHandler: @escaping (AFDownloadResponse<Serializer.SerializedObject>) -> Void)
-    -> Self {
+        -> Self {
         _response(queue: queue, responseSerializer: responseSerializer, completionHandler: completionHandler)
     }
 
@@ -448,7 +448,7 @@ extension DownloadRequest {
     public func response<Serializer: ResponseSerializer>(queue: DispatchQueue = .main,
                                                          responseSerializer: Serializer,
                                                          completionHandler: @escaping (AFDownloadResponse<Serializer.SerializedObject>) -> Void)
-    -> Self {
+        -> Self {
         _response(queue: queue, responseSerializer: responseSerializer, completionHandler: completionHandler)
     }
 }

@@ -1,6 +1,7 @@
 import Foundation
 
 enum JesflixSize: CGFloat {
+    case marginXS = 8
     case marginS = 16
     case marginM = 32
     case marginL = 64

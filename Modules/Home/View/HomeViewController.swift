@@ -3,13 +3,24 @@ import UIKit
 class HomeViewController: UIViewController {
     private let presenter: HomePresenterProtocol
     
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = String.getLabelForKey("common_home")
-        label.textColor = UIColor.theme(.redDark)
-        label.font = UIFont.theme(.bold30)
-        label.textAlignment = .center
-        return label
+    private var entertainmentSections: [DtoEntertainmentSection] = [] {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                self?.reloadData()
+            }
+        }
+    }
+    
+    private let homeFeedTable: UITableView = {
+        let table = UITableView(frame: .zero, style: .grouped)
+        table.register(CollectionViewMoviesCell.self, forCellReuseIdentifier: CollectionViewMoviesCell.identifier)
+        table.separatorStyle = .none
+        return table
+    }()
+    
+    private let heroHeader: HeroHeader = {
+        let heroHeader = HeroHeader()
+        return heroHeader
     }()
     
     init (presenter: HomePresenterProtocol) {
@@ -23,19 +34,75 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.setHidesBackButton(true, animated: true)
-        self.view.backgroundColor = UIColor.theme(.white)
-        setUpTitleLabel()
+        navigationItem.setHidesBackButton(true, animated: true)
+        homeFeedTable.backgroundColor = UIColor.theme(.white)
+        setUpHomeFeedTableViewLayout()
     }
     
-    private func setUpTitleLabel() {
-        self.view.addSubview(titleLabel)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter.viewDidLoad()
+    }
+    
+    private func setUpHomeFeedTableViewLayout() {
+        view.addSubview(homeFeedTable)
+        homeFeedTable.delegate = self
+        homeFeedTable.dataSource = self
+        homeFeedTable.frame = view.frame
+    }
+    
+    private func loadHeroHeader() {
+        if let popularMovie = entertainmentSections.first?.entertainments.last {
+            let heroHeader = HeroHeader(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+            heroHeader.configure(entertainment: popularMovie)
+            homeFeedTable.tableHeaderView = heroHeader
+        }
+    }
+    
+    private func reloadData() {
+        loadHeroHeader()
+        homeFeedTable.reloadData()
     }
 }
 
 extension HomeViewController: HomeViewProtocol {
+    func updateEntertainmentSections(with entertainmentSection: DtoEntertainmentSection) {
+        if let indexSection = entertainmentSections.firstIndex(where: {$0.type == entertainmentSection.type}) {
+            entertainmentSections[indexSection] = entertainmentSection
+        } else {
+            entertainmentSections.append(entertainmentSection)
+        }
+    }
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return entertainmentSections.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let section = entertainmentSections[indexPath.section]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewMoviesCell.identifier, for: indexPath) as? CollectionViewMoviesCell else {return UITableViewCell()}
+        cell.configure(entertainments: section.entertainments)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.text = entertainmentSections[section].title
+        label.font = UIFont.theme(.bold30)
+        return label
+    }
 }

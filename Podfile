@@ -8,6 +8,7 @@ target 'Jesflix' do
   # Pods for Jesflix
 pod 'SwiftLint'
 pod 'Alamofire'
+pod 'SDWebImage'
 pod 'FirebaseAnalytics'
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
