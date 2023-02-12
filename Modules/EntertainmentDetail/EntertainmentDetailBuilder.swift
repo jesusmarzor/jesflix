@@ -14,6 +14,7 @@ class EntertainmentDetailBuilder {
         let interactor = EntertainmentDetailInteractor(dataManager: dataManager)
         let presenter = EntertainmentDetailPresenter(interactor: interactor, coordinnatorOutput: coordinatorOutput)
         let view = EntertainmentDetailViewController(entertainment: entertainment, presenter: presenter)
+        view.hidesBottomBarWhenPushed = true
         presenter.view = view
         return view
     }

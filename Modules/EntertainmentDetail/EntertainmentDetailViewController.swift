@@ -3,6 +3,7 @@ import UIKit
 class EntertainmentDetailViewController: UIViewController {
     private let presenter: EntertainmentDetailPresenterProtocol
     private let entertainment: EntertainmentProtocol
+    private var viewTranslation = CGPoint(x: 0, y: 0)
     
     private lazy var closeButton: UIButton = {
         let button = UIButton()
@@ -41,6 +42,7 @@ class EntertainmentDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleDismiss)))
         view.backgroundColor = UIColor.theme(.white)
         navigationItem.leftBarButtonItem?.isHidden = false
         navigationController?.navigationBar.tintColor = UIColor.theme(.black)
@@ -52,8 +54,8 @@ class EntertainmentDetailViewController: UIViewController {
     private func setUpCloseButton() {
         view.addSubview(closeButton)
         closeButton.translatesAutoresizingMaskIntoConstraints = false
-        closeButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        closeButton.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        closeButton.heightAnchor.constraint(equalToConstant: JesflixHeightSize.S.rawValue).isActive = true
+        closeButton.widthAnchor.constraint(equalToConstant: JesflixHeightSize.S.rawValue).isActive = true
         closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: JesflixSize.marginS.rawValue).isActive = true
         closeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -JesflixSize.marginS.rawValue).isActive = true
         view.bringSubviewToFront(closeButton)
@@ -78,6 +80,29 @@ class EntertainmentDetailViewController: UIViewController {
     @objc
     private func didTapCloseButton() {
         dismiss(animated: true)
+    }
+    
+    @objc
+    func handleDismiss(sender: UIPanGestureRecognizer) {
+        switch sender.state {
+        case .changed:
+            viewTranslation = sender.translation(in: view)
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+                self.view.transform = CGAffineTransform(translationX: 0, y: self.viewTranslation.y)
+            })
+            
+        case .ended:
+            if viewTranslation.y < 200 {
+                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+                    self.view.transform = .identity
+                })
+            } else {
+                dismiss(animated: true, completion: nil)
+            }
+            
+        default:
+            break
+        }
     }
 }
 

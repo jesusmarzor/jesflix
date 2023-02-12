@@ -22,6 +22,7 @@ class CollectionViewMoviesCell: UITableViewCell {
         layout.itemSize = CGSize(width: 140, height: 200)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(CollectionViewMovieCell.self, forCellWithReuseIdentifier: CollectionViewMovieCell.identifier)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: JesflixSize.marginXS.rawValue, bottom: 0, right: JesflixSize.marginXS.rawValue)
         return collectionView
     }()
     

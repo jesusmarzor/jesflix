@@ -55,7 +55,7 @@ class HomeCoordinator {
     
     private func showEntertainmentDetail(entertainment: EntertainmentProtocol) {
         let vc = EntertainmentDetailBuilder(entertainment: entertainment) { _ in }.build()
-        vc.modalPresentationStyle = .fullScreen
+        vc.modalPresentationStyle = .overFullScreen
         navigator.present(vc, animated: true)
     }
 }

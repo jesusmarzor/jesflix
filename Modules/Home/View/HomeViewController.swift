@@ -103,10 +103,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
         let label = UILabel()
         label.text = entertainmentSections[section].title
-        label.font = UIFont.theme(.bold30)
-        return label
+        label.font = UIFont.theme(.bold24)
+        view.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: JesflixSize.marginXS.rawValue).isActive = true
+        label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -JesflixSize.marginXS.rawValue).isActive = true
+        return view
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
