@@ -1,17 +1,15 @@
 import UIKit
 
-class TabBarBuilder: Builder {
-    private var coordinatorOutput: (TabBarOutput) -> Void
+class TabBarBuilder {
+    private var tabs: [UINavigationController]
     
-    init(coordinnatorOutput: @escaping (TabBarOutput) -> Void) {
-        self.coordinatorOutput = coordinnatorOutput
+    init(tabs: [UINavigationController]) {
+        self.tabs = tabs
     }
     
     func build() -> UIViewController {
-        let dataManager = TabBarDataManager()
-        let interactor = TabBarInteractor(dataManager: dataManager)
-        let presenter = TabBarPresenter(interactor: interactor, coordinnatorOutput: coordinatorOutput)
-        let view = TabBarViewController(presenter: presenter)
+        let presenter = TabBarPresenter()
+        let view = TabBarViewController(tabs: tabs, presenter: presenter)
         presenter.view = view
         return view
     }
