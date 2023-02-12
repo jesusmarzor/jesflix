@@ -34,6 +34,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewDidLoad()
         let label = UILabel()
         label.text = "Para \(presenter.getUser().email)"
         label.font = UIFont.theme(.regular16)
@@ -44,11 +45,6 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.tintColor = UIColor.theme(.black)
         homeFeedTable.backgroundColor = UIColor.theme(.white)
         setUpHomeFeedTableViewLayout()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        presenter.viewDidLoad()
     }
     
     private func setUpHomeFeedTableViewLayout() {
@@ -94,7 +90,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = entertainmentSections[indexPath.section]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewMoviesCell.identifier, for: indexPath) as? CollectionViewMoviesCell else {return UITableViewCell()}
-        cell.configure(entertainments: section.entertainments)
+        cell.configure(entertainments: section.entertainments, delegate: self)
         return cell
     }
     
@@ -117,5 +113,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let defaultOffset = view.safeAreaInsets.top
         let offset = scrollView.contentOffset.y + defaultOffset
         navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offset))
+    }
+}
+
+extension HomeViewController: CollectionViewMoviesCellProtocol {
+    func goToEntertainmentDetail(entertainment: EntertainmentProtocol) {
+        presenter.goToEntertainmentDetail(entertainment: entertainment)
     }
 }

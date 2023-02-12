@@ -22,7 +22,10 @@ class HomeCoordinator {
         state = next(state)
         switch state {
         case .willShowHomeFlow:
-            self.goToHomeFlow()
+            goToHomeFlow()
+            
+        case .willShowEntertainmentDetail(let entertainment):
+            showEntertainmentDetail(entertainment: entertainment)
 
         case .initial, .didShowHomeFlow:
             fatalError("Unexpected Case in App Coordinator")
@@ -34,8 +37,11 @@ class HomeCoordinator {
         case .initial:
             return .willShowHomeFlow
             
-        case .didShowHomeFlow(_):
-            return nextState
+        case .didShowHomeFlow(let homeOutput):
+            switch homeOutput {
+            case .goToEntertainmentDetail(entertainment: let entertainment):
+                return .willShowEntertainmentDetail(entertainment: entertainment)
+            }
             
         default:
             return nextState
@@ -46,10 +52,17 @@ class HomeCoordinator {
         let vc = HomeBuilder {_ in}.build()
         navigator.pushViewController(vc, animated: true)
     }
+    
+    private func showEntertainmentDetail(entertainment: EntertainmentProtocol) {
+        let vc = EntertainmentDetailBuilder(entertainment: entertainment) { _ in }.build()
+        vc.modalPresentationStyle = .fullScreen
+        navigator.present(vc, animated: true)
+    }
 }
 
 enum HomeCoordinatorState {
     case initial
     case didShowHomeFlow(homeOutput: HomeOutput)
     case willShowHomeFlow
+    case willShowEntertainmentDetail(entertainment: EntertainmentProtocol)
 }

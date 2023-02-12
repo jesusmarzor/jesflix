@@ -60,7 +60,7 @@ class TabBarCoordinator {
     private func showTabBar() {
         let vc = TabBarBuilder(tabs: buildTabBarItems()).build()
         navigator.navigationBar.isHidden = true
-        navigator.setViewControllers([vc], animated: true)
+        navigator.pushViewController(vc, animated: true)
     }
 }
 

@@ -51,4 +51,8 @@ extension HomePresenter: HomePresenterProtocol {
     func getUser() -> DtoUser {
         return coreData.getClient()!
     }
+    
+    func goToEntertainmentDetail(entertainment: EntertainmentProtocol) {
+        coordinatorOutput(.goToEntertainmentDetail(entertainment: entertainment))
+    }
 }

@@ -1,7 +1,12 @@
 import UIKit
 
+protocol CollectionViewMoviesCellProtocol: AnyObject {
+    func goToEntertainmentDetail(entertainment: EntertainmentProtocol)
+}
+
 class CollectionViewMoviesCell: UITableViewCell {
     static let identifier = "CollectionViewMoviesCell"
+    weak var delegate: CollectionViewMoviesCellProtocol?
     
     private var entertainments: [EntertainmentProtocol] = [] {
         didSet {
@@ -36,7 +41,8 @@ class CollectionViewMoviesCell: UITableViewCell {
         collectionView.frame = contentView.bounds
     }
     
-    func configure(entertainments: [EntertainmentProtocol]) {
+    func configure(entertainments: [EntertainmentProtocol], delegate: CollectionViewMoviesCellProtocol) {
+        self.delegate = delegate
         self.entertainments = entertainments
     }
 }
@@ -50,5 +56,9 @@ extension CollectionViewMoviesCell: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return entertainments.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.goToEntertainmentDetail(entertainment: entertainments[indexPath.row])
     }
 }
