@@ -34,7 +34,14 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.setHidesBackButton(true, animated: true)
+        let label = UILabel()
+        label.text = "Para \(presenter.getUser().email)"
+        label.font = UIFont.theme(.regular16)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: label)
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(image: UIImage(systemName: "person"), style: .plain, target: self, action: nil)
+        ]
+        navigationController?.navigationBar.tintColor = UIColor.theme(.black)
         homeFeedTable.backgroundColor = UIColor.theme(.white)
         setUpHomeFeedTableViewLayout()
     }
@@ -104,5 +111,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         label.text = entertainmentSections[section].title
         label.font = UIFont.theme(.bold30)
         return label
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let defaultOffset = view.safeAreaInsets.top
+        let offset = scrollView.contentOffset.y + defaultOffset
+        navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offset))
     }
 }

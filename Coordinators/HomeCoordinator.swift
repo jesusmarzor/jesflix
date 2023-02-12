@@ -8,18 +8,23 @@ class HomeCoordinator {
         self.navigator = navigator
         self.state = state
     }
+    
+    func manageHomeInternalNavigation(with homeOutput: HomeOutput) {
+        self.state = .didShowHomeFlow(homeOutput: homeOutput)
+        self.loop()
+    }
 
     func start() {
         self.loop()
     }
 
     private func loop() {
-        self.state = next(self.state)
-        switch  self.state {
+        state = next(state)
+        switch state {
         case .willShowHomeFlow:
             self.goToHomeFlow()
 
-        case .initial:
+        case .initial, .didShowHomeFlow:
             fatalError("Unexpected Case in App Coordinator")
         }
     }
@@ -28,8 +33,11 @@ class HomeCoordinator {
         switch nextState {
         case .initial:
             return .willShowHomeFlow
-
-        case .willShowHomeFlow:
+            
+        case .didShowHomeFlow(_):
+            return nextState
+            
+        default:
             return nextState
         }
     }
@@ -42,5 +50,6 @@ class HomeCoordinator {
 
 enum HomeCoordinatorState {
     case initial
+    case didShowHomeFlow(homeOutput: HomeOutput)
     case willShowHomeFlow
 }

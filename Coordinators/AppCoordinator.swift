@@ -3,12 +3,12 @@ import UIKit
 class AppCoordinator {
     var navigator: UINavigationController
     private var state: AppCoordinatorState
-    private let homeChildCoordinator: HomeCoordinator
+    private let tabBarChildCoordinator: TabBarCoordinator
 
     init(with navigator: UINavigationController, state: AppCoordinatorState) {
         self.navigator = navigator
         self.state = state
-        self.homeChildCoordinator = HomeCoordinator(with: navigator, state: .initial)
+        self.tabBarChildCoordinator = TabBarCoordinator(with: navigator, state: .initial)
     }
 
     func start() {
@@ -37,11 +37,8 @@ class AppCoordinator {
     }
 
     private func goToLoginFlow() {
-        let vc = LoginBuilder {output in
-            switch output {
-            case .goToHomeFlow:
-                self.homeChildCoordinator.start()
-            }
+        let vc = LoginBuilder { _ in
+            self.tabBarChildCoordinator.start()
         }.build()
         navigator.pushViewController(vc, animated: true)
     }
