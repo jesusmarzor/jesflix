@@ -65,12 +65,75 @@ class CoreData {
         putItem(CoreDataKey.user.rawValue, common: user)
     }
     
+    func saveMoviesPagination(endPoint: EndPoint, _ moviesPagination: DtoEntertainmentPagination<DtoMovie>) {
+        switch endPoint {
+        case .commonPopular:
+            putItem(CoreDataKey.popularMoviesPagination.rawValue, common: moviesPagination)
+            
+        case .commonTopRated:
+            putItem(CoreDataKey.topRatedMoviesPagination.rawValue, common: moviesPagination)
+            
+        case .commonUpcoming:
+            putItem(CoreDataKey.upcomingMoviesPagination.rawValue, common: moviesPagination)
+            
+        default:
+            break
+        }
+    }
+    
+    func saveSeriesPagination(endPoint: EndPoint, _ seriesPagination: DtoEntertainmentPagination<DtoSerie>) {
+        switch endPoint {
+        case .commonPopular:
+            putItem(CoreDataKey.popularSeriesPagination.rawValue, common: seriesPagination)
+            
+        case .commonTopRated:
+            putItem(CoreDataKey.topRatedSeriesPagination.rawValue, common: seriesPagination)
+            
+        default:
+            break
+        }
+    }
+    
     func getClient() -> DtoUser? {
         return queryItem(entityName: CoreDataKey.user.rawValue, item: DtoUser.self)
+    }
+    
+    func getMoviesPagination(endPoint: EndPoint) -> DtoEntertainmentPagination<DtoMovie>? {
+        switch endPoint {
+        case .commonPopular:
+            return queryItem(entityName: CoreDataKey.popularMoviesPagination.rawValue, item: DtoEntertainmentPagination<DtoMovie>.self)
+        
+        case .commonTopRated:
+            return queryItem(entityName: CoreDataKey.topRatedMoviesPagination.rawValue, item: DtoEntertainmentPagination<DtoMovie>.self)
+            
+        case .commonUpcoming:
+            return queryItem(entityName: CoreDataKey.upcomingMoviesPagination.rawValue, item: DtoEntertainmentPagination<DtoMovie>.self)
+            
+        default:
+            return nil
+        }
+    }
+    
+    func getSeriesPagination(endPoint: EndPoint) -> DtoEntertainmentPagination<DtoSerie>? {
+        switch endPoint {
+        case .commonPopular:
+            return queryItem(entityName: CoreDataKey.popularSeriesPagination.rawValue, item: DtoEntertainmentPagination<DtoSerie>.self)
+            
+        case .commonTopRated:
+            return queryItem(entityName: CoreDataKey.topRatedSeriesPagination.rawValue, item: DtoEntertainmentPagination<DtoSerie>.self)
+            
+        default:
+            return nil
+        }
     }
 }
 
 enum CoreDataKey: String {
     case user = "User"
+    case popularMoviesPagination = "PopularMoviesPagination"
+    case upcomingMoviesPagination = "UpcomingMoviesPagination"
+    case topRatedMoviesPagination = "TopRatedMoviesPagination"
+    case popularSeriesPagination = "PopularSeriesPagination"
+    case topRatedSeriesPagination = "TopRatedSeriesPagination"
     case jsonData = "jsonData"
 }

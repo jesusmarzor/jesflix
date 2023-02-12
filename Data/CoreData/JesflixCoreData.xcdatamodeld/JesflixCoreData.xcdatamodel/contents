@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="22C65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="22D49" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="PopularMoviesPagination" representedClassName="PopularMoviesPagination" syncable="YES" codeGenerationType="class">
+        <attribute name="jsonData" optional="YES" attributeType="Binary"/>
+    </entity>
+    <entity name="PopularSeriesPagination" representedClassName="PopularSeriesPagination" syncable="YES" codeGenerationType="class">
+        <attribute name="jsonData" optional="YES" attributeType="Binary"/>
+    </entity>
+    <entity name="TopRatedMoviesPagination" representedClassName="TopRatedMoviesPagination" syncable="YES" codeGenerationType="class">
+        <attribute name="jsonData" optional="YES" attributeType="Binary"/>
+    </entity>
+    <entity name="TopRatedSeriesPagination" representedClassName="TopRatedSeriesPagination" syncable="YES" codeGenerationType="class">
+        <attribute name="jsonData" optional="YES" attributeType="Binary"/>
+    </entity>
+    <entity name="UpcomingMoviesPagination" representedClassName="UpcomingMoviesPagination" syncable="YES" codeGenerationType="class">
+        <attribute name="jsonData" optional="YES" attributeType="Binary"/>
+    </entity>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
         <attribute name="jsonData" optional="YES" attributeType="Binary"/>
     </entity>

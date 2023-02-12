@@ -47,6 +47,13 @@
 		606728D1298FF61900C6A069 /* DtoGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606728D0298FF61900C6A069 /* DtoGenre.swift */; };
 		606728D3298FF65800C6A069 /* DtoEntertainmentPagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606728D2298FF65800C6A069 /* DtoEntertainmentPagination.swift */; };
 		606728D5298FFD8F00C6A069 /* DtoEntertainmentMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606728D4298FFD8F00C6A069 /* DtoEntertainmentMedia.swift */; };
+		60CAB55429981BE8002E6AE8 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB54A29981BE8002E6AE8 /* TabBarPresenter.swift */; };
+		60CAB55529981BE8002E6AE8 /* TabBarViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB54B29981BE8002E6AE8 /* TabBarViewControllerProtocol.swift */; };
+		60CAB55629981BE8002E6AE8 /* TabBarPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB54C29981BE8002E6AE8 /* TabBarPresenterProtocol.swift */; };
+		60CAB55729981BE8002E6AE8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB54D29981BE8002E6AE8 /* TabBarViewController.swift */; };
+		60CAB55829981BE8002E6AE8 /* TabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB54E29981BE8002E6AE8 /* TabBarBuilder.swift */; };
+		60CAB561299822A1002E6AE8 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB560299822A1002E6AE8 /* TabBarCoordinator.swift */; };
+		60CAB578299830D9002E6AE8 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB577299830D9002E6AE8 /* NavBar.swift */; };
 		60DB5963298B0043004ACFBE /* JesflixErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB5962298B0043004ACFBE /* JesflixErrors.swift */; };
 		60DB5965298B16E7004ACFBE /* JesflixButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB5964298B16E7004ACFBE /* JesflixButton.swift */; };
 		60DB5969298B1D68004ACFBE /* JesflixSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB5968298B1D68004ACFBE /* JesflixSizes.swift */; };
@@ -118,6 +125,13 @@
 		606728D0298FF61900C6A069 /* DtoGenre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoGenre.swift; sourceTree = "<group>"; };
 		606728D2298FF65800C6A069 /* DtoEntertainmentPagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoEntertainmentPagination.swift; sourceTree = "<group>"; };
 		606728D4298FFD8F00C6A069 /* DtoEntertainmentMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoEntertainmentMedia.swift; sourceTree = "<group>"; };
+		60CAB54A29981BE8002E6AE8 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
+		60CAB54B29981BE8002E6AE8 /* TabBarViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerProtocol.swift; sourceTree = "<group>"; };
+		60CAB54C29981BE8002E6AE8 /* TabBarPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenterProtocol.swift; sourceTree = "<group>"; };
+		60CAB54D29981BE8002E6AE8 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		60CAB54E29981BE8002E6AE8 /* TabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBuilder.swift; sourceTree = "<group>"; };
+		60CAB560299822A1002E6AE8 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		60CAB577299830D9002E6AE8 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 		60DB5962298B0043004ACFBE /* JesflixErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JesflixErrors.swift; sourceTree = "<group>"; };
 		60DB5964298B16E7004ACFBE /* JesflixButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JesflixButton.swift; sourceTree = "<group>"; };
 		60DB5968298B1D68004ACFBE /* JesflixSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JesflixSizes.swift; sourceTree = "<group>"; };
@@ -198,6 +212,7 @@
 			children = (
 				604367DB297F43E2006D9D6B /* JesflixTextField.swift */,
 				60DB5964298B16E7004ACFBE /* JesflixButton.swift */,
+				60CAB577299830D9002E6AE8 /* NavBar.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -297,6 +312,7 @@
 			children = (
 				605C7073297D63C500249F0B /* AppCoordinator.swift */,
 				60FB83972987353600F99D4C /* HomeCoordinator.swift */,
+				60CAB560299822A1002E6AE8 /* TabBarCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -304,6 +320,7 @@
 		605C7075297D641200249F0B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				60CAB54829981BD4002E6AE8 /* TabBar */,
 				60FB837D298734B000F99D4C /* Home */,
 				605C7076297D641800249F0B /* Login */,
 			);
@@ -378,6 +395,34 @@
 				6016C67A297DEB890046935A /* Fonts.swift */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		60CAB54829981BD4002E6AE8 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				60CAB55E29982134002E6AE8 /* Presenter */,
+				60CAB55D2998212B002E6AE8 /* View */,
+				60CAB54E29981BE8002E6AE8 /* TabBarBuilder.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		60CAB55D2998212B002E6AE8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				60CAB54B29981BE8002E6AE8 /* TabBarViewControllerProtocol.swift */,
+				60CAB54D29981BE8002E6AE8 /* TabBarViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60CAB55E29982134002E6AE8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				60CAB54A29981BE8002E6AE8 /* TabBarPresenter.swift */,
+				60CAB54C29981BE8002E6AE8 /* TabBarPresenterProtocol.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		60FB83672986DD8A00F99D4C /* Data */ = {
@@ -607,6 +652,7 @@
 				606728D5298FFD8F00C6A069 /* DtoEntertainmentMedia.swift in Sources */,
 				605C7082297D643900249F0B /* LoginPresenter.swift in Sources */,
 				60FB837C29872E3500F99D4C /* UIViewController+Extensions.swift in Sources */,
+				60CAB561299822A1002E6AE8 /* TabBarCoordinator.swift in Sources */,
 				605C7089297D643900249F0B /* LoginOutput.swift in Sources */,
 				605C7083297D643900249F0B /* LoginViewControllerProtocol.swift in Sources */,
 				60FB8391298734C600F99D4C /* HomeDataManager.swift in Sources */,
@@ -617,6 +663,7 @@
 				600AA132298EFEAF0099A931 /* CollectionViewMoviesCell.swift in Sources */,
 				606728D1298FF61900C6A069 /* DtoGenre.swift in Sources */,
 				60FB8390298734C600F99D4C /* HomeOutput.swift in Sources */,
+				60CAB55429981BE8002E6AE8 /* TabBarPresenter.swift in Sources */,
 				60FB83982987353600F99D4C /* HomeCoordinator.swift in Sources */,
 				60FB838A298734C600F99D4C /* HomeViewControllerProtocol.swift in Sources */,
 				60FB838E298734C600F99D4C /* HomeInteractor.swift in Sources */,
@@ -626,8 +673,13 @@
 				60FB838D298734C600F99D4C /* HomeBuilder.swift in Sources */,
 				600AA122298EB2780099A931 /* JesflixEnvironment.swift in Sources */,
 				605C7081297D643900249F0B /* LoginInteractorProtocol.swift in Sources */,
+				60CAB55529981BE8002E6AE8 /* TabBarViewControllerProtocol.swift in Sources */,
 				600AA134298F05F90099A931 /* HeroHeader.swift in Sources */,
+				60CAB55829981BE8002E6AE8 /* TabBarBuilder.swift in Sources */,
+				60CAB55729981BE8002E6AE8 /* TabBarViewController.swift in Sources */,
+				60CAB55629981BE8002E6AE8 /* TabBarPresenterProtocol.swift in Sources */,
 				605C7074297D63C500249F0B /* AppCoordinator.swift in Sources */,
+				60CAB578299830D9002E6AE8 /* NavBar.swift in Sources */,
 				605C705C297D630000249F0B /* ViewController.swift in Sources */,
 				600AA129298EC4EF0099A931 /* EndPoints.swift in Sources */,
 				6016C677297DE28C0046935A /* UIColor+Extensions.swift in Sources */,
