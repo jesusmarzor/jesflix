@@ -10,6 +10,9 @@ extension String {
         case .wrongPassword:
             return String.getLabelForKey("error_wrong_password")
             
+        case .userNotFound:
+            return String.getLabelForKey("error_user_not_found")
+            
         case .common:
             return String.getLabelForKey("error_common")
         }

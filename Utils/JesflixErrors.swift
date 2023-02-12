@@ -1,4 +1,5 @@
 enum JesflixError: Error {
-    case wrongPassword
     case common
+    case wrongPassword
+    case userNotFound
 }
