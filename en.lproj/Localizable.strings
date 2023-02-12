@@ -6,4 +6,5 @@
 "common_error" = "Error";
 
 "error_wrong_password" = "Wrong password";
+"error_user_not_found" = "User not found";
 "error_common" = "Unknown error occurred";
