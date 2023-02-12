@@ -19,6 +19,7 @@ class LoginPresenter {
                 break
                 
             case .failure(let error):
+                self?.view?.hideLoader()
                 self?.view?.handleError(error)
             }
         }
@@ -33,6 +34,7 @@ class LoginPresenter {
                 break
                 
             case .failure(let error):
+                self?.view?.hideLoader()
                 self?.view?.handleError(error)
             }
         }
@@ -61,6 +63,7 @@ extension LoginPresenter: LoginPresenterProtocol {
                 self?.loadEntertainments()
 
             case .failure(let error):
+                self?.view?.hideLoader()
                 self?.view?.handleError(error)
             }
         }
