@@ -47,6 +47,8 @@
 		606728D1298FF61900C6A069 /* DtoGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606728D0298FF61900C6A069 /* DtoGenre.swift */; };
 		606728D3298FF65800C6A069 /* DtoEntertainmentPagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606728D2298FF65800C6A069 /* DtoEntertainmentPagination.swift */; };
 		606728D5298FFD8F00C6A069 /* DtoEntertainmentMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606728D4298FFD8F00C6A069 /* DtoEntertainmentMedia.swift */; };
+		608890C6299ADB2200E29C17 /* EntertainmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608890C5299ADB2200E29C17 /* EntertainmentDetailViewController.swift */; };
+		608890CC299AF06300E29C17 /* PlayerDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608890CB299AF06300E29C17 /* PlayerDescriptionCell.swift */; };
 		60CAB55429981BE8002E6AE8 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB54A29981BE8002E6AE8 /* TabBarPresenter.swift */; };
 		60CAB55529981BE8002E6AE8 /* TabBarViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB54B29981BE8002E6AE8 /* TabBarViewControllerProtocol.swift */; };
 		60CAB55629981BE8002E6AE8 /* TabBarPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB54C29981BE8002E6AE8 /* TabBarPresenterProtocol.swift */; };
@@ -54,12 +56,10 @@
 		60CAB55829981BE8002E6AE8 /* TabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB54E29981BE8002E6AE8 /* TabBarBuilder.swift */; };
 		60CAB561299822A1002E6AE8 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB560299822A1002E6AE8 /* TabBarCoordinator.swift */; };
 		60CAB578299830D9002E6AE8 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB577299830D9002E6AE8 /* NavBar.swift */; };
-		60CAB57C299939F9002E6AE8 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB57B299939F9002E6AE8 /* MovieDetail.swift */; };
 		60CAB588299942D4002E6AE8 /* EntertainmentDetailInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB57E299942D4002E6AE8 /* EntertainmentDetailInteractorProtocol.swift */; };
 		60CAB589299942D4002E6AE8 /* EntertainmentDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB57F299942D4002E6AE8 /* EntertainmentDetailPresenter.swift */; };
 		60CAB58A299942D4002E6AE8 /* EntertainmentDetailViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB580299942D4002E6AE8 /* EntertainmentDetailViewControllerProtocol.swift */; };
 		60CAB58B299942D4002E6AE8 /* EntertainmentDetailPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB581299942D4002E6AE8 /* EntertainmentDetailPresenterProtocol.swift */; };
-		60CAB58C299942D4002E6AE8 /* EntertainmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB582299942D4002E6AE8 /* EntertainmentDetailViewController.swift */; };
 		60CAB58D299942D4002E6AE8 /* EntertainmentDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB583299942D4002E6AE8 /* EntertainmentDetailBuilder.swift */; };
 		60CAB58E299942D4002E6AE8 /* EntertainmentDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB584299942D4002E6AE8 /* EntertainmentDetailInteractor.swift */; };
 		60CAB58F299942D4002E6AE8 /* EntertainmentDetailDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB585299942D4002E6AE8 /* EntertainmentDetailDataManagerProtocol.swift */; };
@@ -136,6 +136,8 @@
 		606728D0298FF61900C6A069 /* DtoGenre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoGenre.swift; sourceTree = "<group>"; };
 		606728D2298FF65800C6A069 /* DtoEntertainmentPagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoEntertainmentPagination.swift; sourceTree = "<group>"; };
 		606728D4298FFD8F00C6A069 /* DtoEntertainmentMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoEntertainmentMedia.swift; sourceTree = "<group>"; };
+		608890C5299ADB2200E29C17 /* EntertainmentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentDetailViewController.swift; sourceTree = "<group>"; };
+		608890CB299AF06300E29C17 /* PlayerDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDescriptionCell.swift; sourceTree = "<group>"; };
 		60CAB54A29981BE8002E6AE8 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
 		60CAB54B29981BE8002E6AE8 /* TabBarViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerProtocol.swift; sourceTree = "<group>"; };
 		60CAB54C29981BE8002E6AE8 /* TabBarPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -143,12 +145,10 @@
 		60CAB54E29981BE8002E6AE8 /* TabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBuilder.swift; sourceTree = "<group>"; };
 		60CAB560299822A1002E6AE8 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		60CAB577299830D9002E6AE8 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
-		60CAB57B299939F9002E6AE8 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		60CAB57E299942D4002E6AE8 /* EntertainmentDetailInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentDetailInteractorProtocol.swift; sourceTree = "<group>"; };
 		60CAB57F299942D4002E6AE8 /* EntertainmentDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentDetailPresenter.swift; sourceTree = "<group>"; };
 		60CAB580299942D4002E6AE8 /* EntertainmentDetailViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentDetailViewControllerProtocol.swift; sourceTree = "<group>"; };
 		60CAB581299942D4002E6AE8 /* EntertainmentDetailPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentDetailPresenterProtocol.swift; sourceTree = "<group>"; };
-		60CAB582299942D4002E6AE8 /* EntertainmentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentDetailViewController.swift; sourceTree = "<group>"; };
 		60CAB583299942D4002E6AE8 /* EntertainmentDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentDetailBuilder.swift; sourceTree = "<group>"; };
 		60CAB584299942D4002E6AE8 /* EntertainmentDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentDetailInteractor.swift; sourceTree = "<group>"; };
 		60CAB585299942D4002E6AE8 /* EntertainmentDetailDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentDetailDataManagerProtocol.swift; sourceTree = "<group>"; };
@@ -243,7 +243,6 @@
 			isa = PBXGroup;
 			children = (
 				600AA133298F05F90099A931 /* HeroHeader.swift */,
-				60CAB57B299939F9002E6AE8 /* MovieDetail.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -253,6 +252,7 @@
 			children = (
 				600AA131298EFEAF0099A931 /* CollectionViewMoviesCell.swift */,
 				606728C5298FB2A100C6A069 /* CollectionViewMovieCell.swift */,
+				608890CB299AF06300E29C17 /* PlayerDescriptionCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -421,6 +421,42 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		608890C7299AEDB900E29C17 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				60CAB580299942D4002E6AE8 /* EntertainmentDetailViewControllerProtocol.swift */,
+				608890C5299ADB2200E29C17 /* EntertainmentDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		608890C8299AEDC300E29C17 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				60CAB57F299942D4002E6AE8 /* EntertainmentDetailPresenter.swift */,
+				60CAB581299942D4002E6AE8 /* EntertainmentDetailPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		608890C9299AEDC900E29C17 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				60CAB57E299942D4002E6AE8 /* EntertainmentDetailInteractorProtocol.swift */,
+				60CAB584299942D4002E6AE8 /* EntertainmentDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		608890CA299AEDCF00E29C17 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				60CAB585299942D4002E6AE8 /* EntertainmentDetailDataManagerProtocol.swift */,
+				60CAB587299942D4002E6AE8 /* EntertainmentDetailDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		60CAB54829981BD4002E6AE8 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -452,16 +488,12 @@
 		60CAB57D299942B2002E6AE8 /* EntertainmentDetail */ = {
 			isa = PBXGroup;
 			children = (
-				60CAB57E299942D4002E6AE8 /* EntertainmentDetailInteractorProtocol.swift */,
-				60CAB57F299942D4002E6AE8 /* EntertainmentDetailPresenter.swift */,
-				60CAB580299942D4002E6AE8 /* EntertainmentDetailViewControllerProtocol.swift */,
-				60CAB581299942D4002E6AE8 /* EntertainmentDetailPresenterProtocol.swift */,
-				60CAB582299942D4002E6AE8 /* EntertainmentDetailViewController.swift */,
+				608890CA299AEDCF00E29C17 /* DataManager */,
+				608890C9299AEDC900E29C17 /* Interactor */,
+				608890C8299AEDC300E29C17 /* Presenter */,
+				608890C7299AEDB900E29C17 /* View */,
 				60CAB583299942D4002E6AE8 /* EntertainmentDetailBuilder.swift */,
-				60CAB584299942D4002E6AE8 /* EntertainmentDetailInteractor.swift */,
-				60CAB585299942D4002E6AE8 /* EntertainmentDetailDataManagerProtocol.swift */,
 				60CAB586299942D4002E6AE8 /* EntertainmentDetailOutput.swift */,
-				60CAB587299942D4002E6AE8 /* EntertainmentDetailDataManager.swift */,
 			);
 			path = EntertainmentDetail;
 			sourceTree = "<group>";
@@ -657,7 +689,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint lint --strict | sed \"s/warning:/error:/\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" lint --config .swiftlint.yml --strict | sed \"s/warning:/error:/\"\n";
 		};
 		6879259457EC1A0AFAB35AF5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -684,7 +716,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				605C7085297D643900249F0B /* LoginViewController.swift in Sources */,
-				60CAB57C299939F9002E6AE8 /* MovieDetail.swift in Sources */,
 				600AA124298EBAD00099A931 /* DtoMovie.swift in Sources */,
 				60CAB58F299942D4002E6AE8 /* EntertainmentDetailDataManagerProtocol.swift in Sources */,
 				600AA12B298ECE4A0099A931 /* UIImageView+Extensions.swift in Sources */,
@@ -711,6 +742,7 @@
 				60CAB58E299942D4002E6AE8 /* EntertainmentDetailInteractor.swift in Sources */,
 				60FB83982987353600F99D4C /* HomeCoordinator.swift in Sources */,
 				60FB838A298734C600F99D4C /* HomeViewControllerProtocol.swift in Sources */,
+				608890CC299AF06300E29C17 /* PlayerDescriptionCell.swift in Sources */,
 				60FB838E298734C600F99D4C /* HomeInteractor.swift in Sources */,
 				60DB5969298B1D68004ACFBE /* JesflixSizes.swift in Sources */,
 				60CAB588299942D4002E6AE8 /* EntertainmentDetailInteractorProtocol.swift in Sources */,
@@ -729,12 +761,12 @@
 				60CAB55729981BE8002E6AE8 /* TabBarViewController.swift in Sources */,
 				60CAB55629981BE8002E6AE8 /* TabBarPresenterProtocol.swift in Sources */,
 				605C7074297D63C500249F0B /* AppCoordinator.swift in Sources */,
+				608890C6299ADB2200E29C17 /* EntertainmentDetailViewController.swift in Sources */,
 				60CAB578299830D9002E6AE8 /* NavBar.swift in Sources */,
 				605C705C297D630000249F0B /* ViewController.swift in Sources */,
 				600AA129298EC4EF0099A931 /* EndPoints.swift in Sources */,
 				6016C677297DE28C0046935A /* UIColor+Extensions.swift in Sources */,
 				605C7086297D643900249F0B /* LoginBuilder.swift in Sources */,
-				60CAB58C299942D4002E6AE8 /* EntertainmentDetailViewController.swift in Sources */,
 				604367C3297F3C6C006D9D6B /* String+Extensions.swift in Sources */,
 				605C7058297D630000249F0B /* AppDelegate.swift in Sources */,
 				600AA11F298EB14E0099A931 /* ServiceProxy.swift in Sources */,

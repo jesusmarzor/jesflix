@@ -12,4 +12,5 @@ pod 'SDWebImage'
 pod 'FirebaseAnalytics'
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
+pod 'youtube-ios-player-helper'
 end
