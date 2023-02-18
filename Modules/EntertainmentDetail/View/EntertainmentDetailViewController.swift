@@ -7,8 +7,8 @@ class EntertainmentDetailViewController: UIViewController {
     private let playerView: YTPlayerView
     
     private let tableView: UITableView = {
-        let table = UITableView(frame: .zero, style: .grouped)
-        table.backgroundColor = UIColor.theme(.white)
+        let table = UITableView(frame: .zero)
+        table.backgroundColor = UIColor.theme(.body)
         table.register(PlayerDescriptionCell.self, forCellReuseIdentifier: PlayerDescriptionCell.identifier)
         table.separatorStyle = .none
         return table
@@ -28,9 +28,7 @@ class EntertainmentDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleDismiss)))
-        view.backgroundColor = UIColor.theme(.white)
-        navigationItem.leftBarButtonItem?.isHidden = false
-        navigationController?.navigationBar.tintColor = UIColor.theme(.black)
+        view.backgroundColor = UIColor.theme(.body)
         playerView.delegate = self
         setUpPlayerViewLayout()
         tableView.delegate = self
@@ -91,12 +89,9 @@ extension EntertainmentDetailViewController: UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PlayerDescriptionCell.identifier, for: indexPath) as? PlayerDescriptionCell else {return UITableViewCell()}
-        cell.configure(title: entertainment.title, overview: entertainment.overview)
+        cell.backgroundColor = UIColor.theme(.body)
+        cell.configure(title: entertainment.title, overview: entertainment.overview, popularity: entertainment.popularity ?? 0)
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
     }
 }
 

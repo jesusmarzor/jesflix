@@ -42,8 +42,8 @@ class HomeViewController: UIViewController {
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(image: UIImage(systemName: "person"), style: .plain, target: self, action: nil)
         ]
-        navigationController?.navigationBar.tintColor = UIColor.theme(.black)
-        homeFeedTable.backgroundColor = UIColor.theme(.white)
+        navigationController?.navigationBar.tintColor = UIColor.theme(.primary)
+        homeFeedTable.backgroundColor = UIColor.theme(.body)
         setUpHomeFeedTableViewLayout()
     }
     
@@ -90,6 +90,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = entertainmentSections[indexPath.section]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewMoviesCell.identifier, for: indexPath) as? CollectionViewMoviesCell else {return UITableViewCell()}
+        cell.backgroundColor = UIColor.theme(.body)
         cell.configure(entertainments: section.entertainments, delegate: self)
         return cell
     }

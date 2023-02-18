@@ -49,6 +49,7 @@
 		606728D5298FFD8F00C6A069 /* DtoEntertainmentMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606728D4298FFD8F00C6A069 /* DtoEntertainmentMedia.swift */; };
 		608890C6299ADB2200E29C17 /* EntertainmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608890C5299ADB2200E29C17 /* EntertainmentDetailViewController.swift */; };
 		608890CC299AF06300E29C17 /* PlayerDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608890CB299AF06300E29C17 /* PlayerDescriptionCell.swift */; };
+		609C8790299C3F580071DFE5 /* IconLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609C878F299C3F580071DFE5 /* IconLabelView.swift */; };
 		60CAB55429981BE8002E6AE8 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB54A29981BE8002E6AE8 /* TabBarPresenter.swift */; };
 		60CAB55529981BE8002E6AE8 /* TabBarViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB54B29981BE8002E6AE8 /* TabBarViewControllerProtocol.swift */; };
 		60CAB55629981BE8002E6AE8 /* TabBarPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAB54C29981BE8002E6AE8 /* TabBarPresenterProtocol.swift */; };
@@ -138,6 +139,7 @@
 		606728D4298FFD8F00C6A069 /* DtoEntertainmentMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoEntertainmentMedia.swift; sourceTree = "<group>"; };
 		608890C5299ADB2200E29C17 /* EntertainmentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentDetailViewController.swift; sourceTree = "<group>"; };
 		608890CB299AF06300E29C17 /* PlayerDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDescriptionCell.swift; sourceTree = "<group>"; };
+		609C878F299C3F580071DFE5 /* IconLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconLabelView.swift; sourceTree = "<group>"; };
 		60CAB54A29981BE8002E6AE8 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
 		60CAB54B29981BE8002E6AE8 /* TabBarViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerProtocol.swift; sourceTree = "<group>"; };
 		60CAB54C29981BE8002E6AE8 /* TabBarPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				600AA133298F05F90099A931 /* HeroHeader.swift */,
+				609C878F299C3F580071DFE5 /* IconLabelView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -727,6 +730,7 @@
 				605C7082297D643900249F0B /* LoginPresenter.swift in Sources */,
 				60FB837C29872E3500F99D4C /* UIViewController+Extensions.swift in Sources */,
 				60CAB561299822A1002E6AE8 /* TabBarCoordinator.swift in Sources */,
+				609C8790299C3F580071DFE5 /* IconLabelView.swift in Sources */,
 				605C7089297D643900249F0B /* LoginOutput.swift in Sources */,
 				605C7083297D643900249F0B /* LoginViewControllerProtocol.swift in Sources */,
 				60FB8391298734C600F99D4C /* HomeDataManager.swift in Sources */,

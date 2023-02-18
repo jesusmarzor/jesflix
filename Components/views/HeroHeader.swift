@@ -35,7 +35,7 @@ class HeroHeader: UIView {
     private func setUpGradientLayout() {
         gradient.colors = [
             UIColor.clear.cgColor,
-            UIColor.theme(.white).cgColor,
+            UIColor.theme(.body).cgColor,
         ]
         gradient.frame = bounds
         layer.addSublayer(gradient)
@@ -43,7 +43,7 @@ class HeroHeader: UIView {
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        gradient.colors?[1] = UIColor.theme(.white).cgColor
+        gradient.colors?[1] = UIColor.theme(.body).cgColor
         self.setNeedsDisplay()
     }
     

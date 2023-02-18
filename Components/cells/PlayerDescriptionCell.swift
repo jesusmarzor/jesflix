@@ -17,6 +17,19 @@ class PlayerDescriptionCell: UITableViewCell {
         return label
     }()
     
+    private lazy var popularityView: IconLabelView = {
+        let view = IconLabelView()
+        return view
+    }()
+    
+    private lazy var footerStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [popularityView])
+        stackView.distribution = .fill
+        stackView.alignment = .fill
+        stackView.axis = .vertical
+        return stackView
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         commonInit()
@@ -29,11 +42,13 @@ class PlayerDescriptionCell: UITableViewCell {
     private func commonInit() {
         setUpTitleLabelLayout()
         setUpOverviewLabelLayout()
+        setUpFooterStackView()
     }
     
-    func configure(title: String, overview: String) {
+    func configure(title: String, overview: String, popularity: Float) {
         titleLabel.text = title
         overviewLabel.text = overview
+        popularityView.configure(image: UIImage(systemName: "person.3")!, label: String(popularity))
     }
     
     private func setUpTitleLabelLayout() {
@@ -49,7 +64,15 @@ class PlayerDescriptionCell: UITableViewCell {
         overviewLabel.translatesAutoresizingMaskIntoConstraints = false
         overviewLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: JesflixSize.marginXS.rawValue).isActive = true
         overviewLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: JesflixSize.marginS.rawValue).isActive = true
-        overviewLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -JesflixSize.marginS.rawValue).isActive = true
-        overviewLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -JesflixSize.marginS.rawValue).isActive = true
+        overviewLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -JesflixSize.marginS.rawValue).isActive = true
+    }
+    
+    private func setUpFooterStackView() {
+        addSubview(footerStackView)
+        footerStackView.translatesAutoresizingMaskIntoConstraints = false
+        footerStackView.topAnchor.constraint(equalTo: overviewLabel.bottomAnchor).isActive = true
+        footerStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -JesflixSize.marginXS.rawValue).isActive = true
+        footerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: JesflixSize.marginS.rawValue).isActive = true
+        footerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -JesflixSize.marginS.rawValue).isActive = true
     }
 }

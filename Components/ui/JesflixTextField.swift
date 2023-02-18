@@ -4,7 +4,7 @@ class JesflixTextField: UITextField {
     func configure(type: JesflixTextFieldType, heightSize: JesflixHeightSize, placeholder: String) {
         self.placeholder = placeholder
         self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.theme(.gray).cgColor
+        self.layer.borderColor = UIColor.theme(.primary).cgColor
         self.layer.cornerRadius = 5
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
         self.leftView = paddingView

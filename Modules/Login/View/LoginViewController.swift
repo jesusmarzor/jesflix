@@ -6,7 +6,7 @@ class LoginViewController: UIViewController {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = String.getLabelForKey("common_login")
-        label.textColor = UIColor.theme(.redDark)
+        label.textColor = UIColor.theme(.letter)
         label.font = UIFont.theme(.bold30)
         label.textAlignment = .center
         return label
@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.theme(.white)
+        self.view.backgroundColor = UIColor.theme(.body)
         setUpTitleLabel()
         setUpEmailTextField()
         setUpPasswordTextField()

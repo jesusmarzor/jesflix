@@ -23,15 +23,15 @@ class TabBarViewController: UITabBarController {
     
     var tabBarAppearance: UITabBarAppearance {
         let appearance = UITabBarAppearance()
-        appearance.backgroundColor = UIColor.theme(.white)
+        appearance.backgroundColor = UIColor.theme(.body)
         appearance.shadowColor = nil
         appearance.shadowImage = nil
-        appearance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.theme(.black),
+        appearance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.theme(.letter),
                                                                          NSAttributedString.Key.font: UIFont.theme(.regular10)]
-        appearance.stackedLayoutAppearance.normal.iconColor = UIColor.theme(.black)
-        appearance.stackedLayoutAppearance.selected.iconColor = UIColor.theme(.gray)
+        appearance.stackedLayoutAppearance.normal.iconColor = UIColor.theme(.letter)
+        appearance.stackedLayoutAppearance.selected.iconColor = UIColor.theme(.primary)
         appearance.stackedLayoutAppearance.normal.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 5)
-        appearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.theme(.gray),
+        appearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.theme(.primary),
                                                                            NSAttributedString.Key.font: UIFont.theme(.regular10)]
         return appearance
     }
