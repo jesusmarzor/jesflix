@@ -1,4 +1,3 @@
-import Foundation
-
 protocol EntertainmentDetailPresenterProtocol: AnyObject {
+    func viewDidLoad(entertainment: EntertainmentProtocol)
 }

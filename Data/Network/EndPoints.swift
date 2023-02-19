@@ -7,4 +7,5 @@ enum EndPoint: String {
     case commonOnTheAir = "on_the_air"
     case commonAiringToday = "airing_today"
     case commonTopRated = "top_rated"
+    case commonVideos = "/videos"
 }

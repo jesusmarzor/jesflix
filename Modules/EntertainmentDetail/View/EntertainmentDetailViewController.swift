@@ -27,6 +27,7 @@ class EntertainmentDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewDidLoad(entertainment: entertainment)
         view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleDismiss)))
         view.backgroundColor = UIColor.theme(.body)
         playerView.delegate = self
@@ -34,7 +35,6 @@ class EntertainmentDetailViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         setUpTableViewLayout()
-        playerView.load(withVideoId: "", playerVars: ["playsinline": 1, "controls": 0, "autohide": 1, "showinfo": 0, "rel": 0, "loop": 1, "modestbranding": 1])
     }
     
     private func setUpPlayerViewLayout() {
@@ -80,6 +80,9 @@ class EntertainmentDetailViewController: UIViewController {
 }
 
 extension EntertainmentDetailViewController: EntertainmentDetailViewProtocol {
+    func updateYTPlayerVideo(with idVideo: String) {
+        playerView.load(withVideoId: idVideo, playerVars: ["playsinline": 1, "controls": 0, "autohide": 1, "showinfo": 0, "rel": 0, "loop": 1, "modestbranding": 1])
+    }
 }
 
 extension EntertainmentDetailViewController: UITableViewDelegate, UITableViewDataSource {

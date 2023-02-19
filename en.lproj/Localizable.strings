@@ -8,3 +8,4 @@
 "error_wrong_password" = "Wrong password";
 "error_user_not_found" = "User not found";
 "error_common" = "Unknown error occurred";
+"error_videos_not_found" = "Videos not found";

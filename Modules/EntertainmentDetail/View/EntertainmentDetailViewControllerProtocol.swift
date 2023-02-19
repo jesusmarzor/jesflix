@@ -1,4 +1,5 @@
 import UIKit
 
-protocol EntertainmentDetailViewProtocol: AnyObject {
+protocol EntertainmentDetailViewProtocol: LoaderProtocol, HandleErrorProtocol {
+    func updateYTPlayerVideo(with idVideo: String)
 }
