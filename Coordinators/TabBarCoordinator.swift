@@ -27,7 +27,7 @@ class TabBarCoordinator {
         
         vc1.tabBarItem.image = UIImage(systemName: "house")
         
-        vc1.title = "home"
+        vc1.title = String.getLabelForKey("home")
         
         return [vc1]
     }

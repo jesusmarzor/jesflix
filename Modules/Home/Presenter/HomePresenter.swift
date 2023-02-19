@@ -41,11 +41,11 @@ class HomePresenter {
 
 extension HomePresenter: HomePresenterProtocol {
     func viewDidLoad() {
-        getMoviesPagination(endPoint: .commonPopular, sectionTitle: "Películas populares", sectionType: .moviesPopular)
-        getMoviesPagination(endPoint: .commonTopRated, sectionTitle: "Películas mejores valoradas", sectionType: .moviesTopRated)
-        getSeriesPagination(endPoint: .commonPopular, sectionTitle: "Series populares", sectionType: .seriesPopular)
-        getSeriesPagination(endPoint: .commonTopRated, sectionTitle: "Series mejores valoradas", sectionType: .seriesTopRated)
-        getMoviesPagination(endPoint: .commonUpcoming, sectionTitle: "Próximas películas", sectionType: .moviesUpcoming)
+        getMoviesPagination(endPoint: .commonPopular, sectionTitle: String.getLabelForKey("common_popular_movies"), sectionType: .moviesPopular)
+        getMoviesPagination(endPoint: .commonTopRated, sectionTitle: String.getLabelForKey("common_top_rated_movies"), sectionType: .moviesTopRated)
+        getSeriesPagination(endPoint: .commonPopular, sectionTitle: String.getLabelForKey("common_popular_series"), sectionType: .seriesPopular)
+        getSeriesPagination(endPoint: .commonTopRated, sectionTitle: String.getLabelForKey("common_top_rated_series"), sectionType: .seriesTopRated)
+        getMoviesPagination(endPoint: .commonUpcoming, sectionTitle: String.getLabelForKey("common_upcoming_movies"), sectionType: .moviesUpcoming)
     }
     
     func getUser() -> DtoUser {

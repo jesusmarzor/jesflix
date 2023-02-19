@@ -4,6 +4,11 @@
 "common_home" = "Home";
 "common_ok" = "Ok";
 "common_error" = "Error";
+"common_popular_movies" = "Popular movies";
+"common_popular_series" = "Popular series";
+"common_top_rated_movies" = "Top rated movies";
+"common_top_rated_series" = "Top rated series";
+"common_upcoming_movies" = "Upcoming movies";
 
 "error_wrong_password" = "Wrong password";
 "error_user_not_found" = "User not found";
