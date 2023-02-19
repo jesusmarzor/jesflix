@@ -126,6 +126,10 @@ class CoreData {
             return nil
         }
     }
+    
+    func signOut() {
+        delete(entityName: CoreDataKey.user.rawValue)
+    }
 }
 
 enum CoreDataKey: String {

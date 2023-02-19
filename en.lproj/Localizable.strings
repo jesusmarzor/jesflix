@@ -10,6 +10,9 @@
 "common_top_rated_series" = "Top rated series";
 "common_upcoming_movies" = "Upcoming movies";
 
+"login_welcome" = "Welcome @!";
+"login_sign_out_button" = "are not you?";
+
 "error_wrong_password" = "Wrong password";
 "error_user_not_found" = "User not found";
 "error_common" = "Unknown error occurred";

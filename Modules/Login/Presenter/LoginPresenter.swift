@@ -4,9 +4,11 @@ class LoginPresenter {
     private var interactor: LoginInteractorProtocol
     weak var view: LoginViewProtocol?
     private var coordinatorOutput: (LoginOutput) -> Void
+    private let coreData: CoreData
 
-    init(interactor: LoginInteractorProtocol, coordinnatorOutput: @escaping (LoginOutput) -> Void) {
+    init(interactor: LoginInteractorProtocol, coreData: CoreData = CoreData.sharedInstance, coordinnatorOutput: @escaping (LoginOutput) -> Void) {
         self.interactor = interactor
+        self.coreData = coreData
         self.coordinatorOutput = coordinnatorOutput
     }
     
@@ -65,5 +67,13 @@ extension LoginPresenter: LoginPresenterProtocol {
                 self?.view?.handleError(error)
             }
         }
+    }
+    
+    func thereIsAnUserConected() -> String? {
+        return coreData.getClient()?.email
+    }
+    
+    func signOut() {
+        coreData.signOut()
     }
 }

@@ -10,6 +10,9 @@
 "common_top_reted_series" = "Series más valoradas";
 "common_upcoming_movies" = "Próximas películas";
 
+"login_welcome" = "Bienvenido @!";
+"login_sign_out_button" = "¿No eres tú?";
+
 "error_wrong_password" = "Contraseña incorrecta";
 "error_user_not_found" = "Usuario no encontrado";
 "error_common" = "Ha ocurrido un problema";
