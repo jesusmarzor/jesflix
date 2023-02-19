@@ -1,6 +1,15 @@
 import UIKit
 
 class JesflixTextField: UITextField {
+    private lazy var eyeButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "eye"), for: .normal)
+        button.tintColor = UIColor.theme(.primary)
+        button.addTarget(self, action: #selector(didTapEyeButton), for: .touchUpInside)
+        button.contentMode = .center
+        return button
+    }()
+    
     func configure(type: JesflixTextFieldType, heightSize: JesflixHeightSize, placeholder: String) {
         self.placeholder = placeholder
         self.layer.borderWidth = 1
@@ -12,22 +21,41 @@ class JesflixTextField: UITextField {
         self.rightView = paddingView
         self.rightViewMode = .always
         self.autocapitalizationType = .none
-        self.isSecureTextEntry = (type == .password)
+        switch type {
+        case .mail:
+            self.keyboardType = .emailAddress
+            
+        case .password:
+            self.isSecureTextEntry = true
+            setUpEyeButtonLayout(height: heightSize.rawValue)
+            
+        default:
+            break
+        }
         setUpHeightButton(heightSize.rawValue)
     }
     
-    func setUpHeightButton(_ height: CGFloat) {
+    private func setUpHeightButton(_ height: CGFloat) {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.heightAnchor.constraint(equalToConstant: height).isActive = true
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        endEditing(true)
+    private func setUpEyeButtonLayout(height: CGFloat) {
+        eyeButton.translatesAutoresizingMaskIntoConstraints = false
+        eyeButton.heightAnchor.constraint(equalToConstant: height).isActive = true
+        eyeButton.widthAnchor.constraint(equalToConstant: height + JesflixSize.marginXS.rawValue).isActive = true
+        rightView = eyeButton
+    }
+    
+    @objc
+    private func didTapEyeButton() {
+        eyeButton.setImage(UIImage(systemName: (isSecureTextEntry) ? "eye.slash" : "eye"), for: .normal)
+        isSecureTextEntry = !isSecureTextEntry
     }
 }
 
 enum JesflixTextFieldType {
     case text
+    case mail
     case password
 }

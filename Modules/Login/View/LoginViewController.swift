@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     
     private lazy var emailTextField: JesflixTextField = {
         let textField = JesflixTextField()
-        textField.configure(type: .text, heightSize: .L, placeholder: String.getLabelForKey("common_email"))
+        textField.configure(type: .mail, heightSize: .L, placeholder: String.getLabelForKey("common_email"))
         return textField
     }()
     
@@ -42,6 +42,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.theme(.body)
+        self.hideKeyboardWhenTappedAround()
         setUpTitleLabel()
         setUpEmailTextField()
         setUpPasswordTextField()
