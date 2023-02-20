@@ -36,7 +36,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         presenter.viewDidLoad()
         let label = UILabel()
-        label.text = "Para \(presenter.getUser().email)"
+        label.text = presenter.getUser().email
         label.font = UIFont.theme(.regular16)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: label)
         navigationItem.rightBarButtonItems = [

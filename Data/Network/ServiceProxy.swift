@@ -14,7 +14,7 @@ class ServiceProxy: RequestInterceptor {
         let url = "\(mainURL)\(url)"
         var params = parameters
         params?["api_key"] = apiKey
-        params?["language"] = "es-ES"
+        params?["language"] = (Locale.current.identifier).replacingOccurrences(of: "_", with: "-")
         AF.request(url, method: .get, parameters: params, headers: headers, interceptor: self).validate().responseDecodable(of: T.self, queue: queue) { response in
             print("IN<---------------------------------------")
             if let HTTPresponse = response.response {
