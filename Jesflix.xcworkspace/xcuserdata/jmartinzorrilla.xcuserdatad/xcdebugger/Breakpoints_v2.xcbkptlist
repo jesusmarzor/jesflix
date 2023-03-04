@@ -3,4 +3,54 @@
    uuid = "32C4AA57-91B7-4214-906A-9F8ED83EAAAB"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ECD28A4A-97A5-42FB-97B2-64A41F66D447"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Coordinators/HomeCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "goToHomeFlow()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ECD28A4A-97A5-42FB-97B2-64A41F66D447 - 98977807c25dc7b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Jesflix.HomeCoordinator.goToHomeFlow() -&gt; ()"
+                  moduleName = "Jesflix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jmartinzorrilla/dev/Jesflix/Coordinators/HomeCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  uuid = "ECD28A4A-97A5-42FB-97B2-64A41F66D447 - 6caa3cda780aa6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Jesflix.HomeOutput) -&gt; () in Jesflix.HomeCoordinator.goToHomeFlow() -&gt; ()"
+                  moduleName = "Jesflix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jmartinzorrilla/dev/Jesflix/Coordinators/HomeCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

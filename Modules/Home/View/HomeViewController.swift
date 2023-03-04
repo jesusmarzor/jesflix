@@ -35,14 +35,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
-        let label = UILabel()
-        label.text = presenter.getUser().email
-        label.font = UIFont.theme(.regular16)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: label)
-        navigationItem.rightBarButtonItems = [
-            UIBarButtonItem(image: UIImage(systemName: "person"), style: .plain, target: self, action: nil)
-        ]
-        navigationController?.navigationBar.tintColor = UIColor.theme(.primary)
         homeFeedTable.backgroundColor = UIColor.theme(.body)
         setUpHomeFeedTableViewLayout()
     }
@@ -51,7 +43,7 @@ class HomeViewController: UIViewController {
         view.addSubview(homeFeedTable)
         homeFeedTable.delegate = self
         homeFeedTable.dataSource = self
-        homeFeedTable.frame = view.frame
+        homeFeedTable.frame = view.bounds
     }
     
     private func loadHeroHeader() {
@@ -114,12 +106,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: JesflixSize.marginXS.rawValue).isActive = true
         label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -JesflixSize.marginXS.rawValue).isActive = true
         return view
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let defaultOffset = view.safeAreaInsets.top
-        let offset = scrollView.contentOffset.y + defaultOffset
-        navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offset))
     }
 }
 

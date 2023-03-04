@@ -1,17 +1,16 @@
 import UIKit
 
-class HomeCoordinator {
+class FavouritesCoordinator {
     var navigator: UINavigationController
-    private var state: HomeCoordinatorState
+    private var state: FavouritesCoordinatorState
 
-    init(with navigator: UINavigationController, state: HomeCoordinatorState) {
+    init(with navigator: UINavigationController, state: FavouritesCoordinatorState) {
         self.navigator = navigator
-        navigator.navigationBar.isHidden = true
         self.state = state
     }
     
-    func manageHomeInternalNavigation(with homeOutput: HomeOutput) {
-        self.state = .didShowHomeFlow(homeOutput: homeOutput)
+    func manageFavouritesInternalNavigation(with favouritesOutput: FavouritesOutput) {
+        self.state = .didShowFavouritesFlow(favouritesOutput: favouritesOutput)
         self.loop()
     }
 
@@ -22,24 +21,24 @@ class HomeCoordinator {
     private func loop() {
         state = next(state)
         switch state {
-        case .willShowHomeFlow:
-            goToHomeFlow()
+        case .willShowFavouritesFlow:
+            goToFavouritesFlow()
             
         case .willShowEntertainmentDetail(let entertainment):
             showEntertainmentDetail(entertainment: entertainment)
 
-        case .initial, .didShowHomeFlow:
+        case .initial, .didShowFavouritesFlow:
             fatalError("Unexpected Case in App Coordinator")
         }
     }
 
-    private func next(_ nextState: HomeCoordinatorState) -> HomeCoordinatorState {
+    private func next(_ nextState: FavouritesCoordinatorState) -> FavouritesCoordinatorState {
         switch nextState {
         case .initial:
-            return .willShowHomeFlow
+            return .willShowFavouritesFlow
             
-        case .didShowHomeFlow(let homeOutput):
-            switch homeOutput {
+        case .didShowFavouritesFlow(let favouritesOutput):
+            switch favouritesOutput {
             case .goToEntertainmentDetail(entertainment: let entertainment):
                 return .willShowEntertainmentDetail(entertainment: entertainment)
             }
@@ -49,8 +48,8 @@ class HomeCoordinator {
         }
     }
 
-    private func goToHomeFlow() {
-        let vc = HomeBuilder {_ in}.build()
+    private func goToFavouritesFlow() {
+        let vc = FavouritesBuilder {_ in}.build()
         navigator.pushViewController(vc, animated: true)
     }
     
@@ -61,9 +60,9 @@ class HomeCoordinator {
     }
 }
 
-enum HomeCoordinatorState {
+enum FavouritesCoordinatorState {
     case initial
-    case didShowHomeFlow(homeOutput: HomeOutput)
-    case willShowHomeFlow
+    case didShowFavouritesFlow(favouritesOutput: FavouritesOutput)
+    case willShowFavouritesFlow
     case willShowEntertainmentDetail(entertainment: EntertainmentProtocol)
 }

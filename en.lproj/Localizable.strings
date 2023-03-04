@@ -2,6 +2,9 @@
 "common_email" = "Email";
 "common_password" = "Password";
 "common_home" = "Home";
+"common_search" = "Search";
+"common_favourites" = "Favourites";
+"common_profile" = "Profile";
 "common_ok" = "Ok";
 "common_error" = "Error";
 "common_popular_movies" = "Popular movies";

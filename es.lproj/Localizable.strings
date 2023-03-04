@@ -2,12 +2,15 @@
 "common_email" = "Email";
 "common_password" = "Contraseña";
 "common_home" = "Inicio";
+"common_search" = "Buscar";
+"common_favourites" = "Favoritos";
+"common_profile" = "Perfil";
 "common_ok" = "Ok";
 "common_error" = "Error";
 "common_popular_movies" = "Películas populares";
 "common_popular_series" = "Series populares";
 "common_top_rated_movies" = "Películas más valoradas";
-"common_top_reted_series" = "Series más valoradas";
+"common_top_rated_series" = "Series más valoradas";
 "common_upcoming_movies" = "Próximas películas";
 
 "login_welcome" = "Bienvenido @!";

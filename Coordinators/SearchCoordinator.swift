@@ -1,17 +1,16 @@
 import UIKit
 
-class HomeCoordinator {
+class SearchCoordinator {
     var navigator: UINavigationController
-    private var state: HomeCoordinatorState
+    private var state: SearchCoordinatorState
 
-    init(with navigator: UINavigationController, state: HomeCoordinatorState) {
+    init(with navigator: UINavigationController, state: SearchCoordinatorState) {
         self.navigator = navigator
-        navigator.navigationBar.isHidden = true
         self.state = state
     }
     
-    func manageHomeInternalNavigation(with homeOutput: HomeOutput) {
-        self.state = .didShowHomeFlow(homeOutput: homeOutput)
+    func manageSearchInternalNavigation(with searchOutput: SearchOutput) {
+        self.state = .didShowSearchFlow(searchOutput: searchOutput)
         self.loop()
     }
 
@@ -22,24 +21,24 @@ class HomeCoordinator {
     private func loop() {
         state = next(state)
         switch state {
-        case .willShowHomeFlow:
-            goToHomeFlow()
+        case .willShowSearchFlow:
+            goToSearchFlow()
             
         case .willShowEntertainmentDetail(let entertainment):
             showEntertainmentDetail(entertainment: entertainment)
 
-        case .initial, .didShowHomeFlow:
+        case .initial, .didShowSearchFlow:
             fatalError("Unexpected Case in App Coordinator")
         }
     }
 
-    private func next(_ nextState: HomeCoordinatorState) -> HomeCoordinatorState {
+    private func next(_ nextState: SearchCoordinatorState) -> SearchCoordinatorState {
         switch nextState {
         case .initial:
-            return .willShowHomeFlow
+            return .willShowSearchFlow
             
-        case .didShowHomeFlow(let homeOutput):
-            switch homeOutput {
+        case .didShowSearchFlow(let searchOutput):
+            switch searchOutput {
             case .goToEntertainmentDetail(entertainment: let entertainment):
                 return .willShowEntertainmentDetail(entertainment: entertainment)
             }
@@ -49,8 +48,8 @@ class HomeCoordinator {
         }
     }
 
-    private func goToHomeFlow() {
-        let vc = HomeBuilder {_ in}.build()
+    private func goToSearchFlow() {
+        let vc = SearchBuilder {_ in}.build()
         navigator.pushViewController(vc, animated: true)
     }
     
@@ -61,9 +60,9 @@ class HomeCoordinator {
     }
 }
 
-enum HomeCoordinatorState {
+enum SearchCoordinatorState {
     case initial
-    case didShowHomeFlow(homeOutput: HomeOutput)
-    case willShowHomeFlow
+    case didShowSearchFlow(searchOutput: SearchOutput)
+    case willShowSearchFlow
     case willShowEntertainmentDetail(entertainment: EntertainmentProtocol)
 }
