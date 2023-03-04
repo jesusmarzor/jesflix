@@ -69,11 +69,24 @@ extension LoginPresenter: LoginPresenterProtocol {
         }
     }
     
+    func loginUserWithBiometrics() {
+        loadEntertainments()
+    }
+    
     func thereIsAnUserConected() -> String? {
         return coreData.getClient()?.email
     }
     
     func signOut() {
+        coreData.setIsUsedBiometrics(with: false)
         coreData.signOut()
+    }
+    
+    func setIsUsedBiometrics(with isUsedBiometrics: Bool) {
+        coreData.setIsUsedBiometrics(with: isUsedBiometrics)
+    }
+    
+    func isUsedBiometrics() -> Bool {
+        return coreData.getIsUsedBiometrics() ?? false
     }
 }

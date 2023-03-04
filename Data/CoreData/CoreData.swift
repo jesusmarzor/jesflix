@@ -32,13 +32,12 @@ class CoreData {
         }
     }
     
-    private func putItem<T: Codable>(_ entityName: String, common: T) {
+    private func putItem<T: Codable>(_ entityName: String, common: T, coreDataKey: CoreDataKey) {
         delete(entityName: entityName)
-        let jsonData = try! JSONEncoder().encode(common)
-
         let context = persistentContainer.viewContext
         let clientConfigQueryResult = NSEntityDescription.insertNewObject(forEntityName: entityName, into: context)
-        clientConfigQueryResult.setValue(jsonData, forKey: CoreDataKey.jsonData.rawValue)
+        let value: Any = (coreDataKey == .jsonData) ? try! JSONEncoder().encode(common) : common
+        clientConfigQueryResult.setValue(value, forKey: coreDataKey.rawValue)
         do {
             try context.save()
         } catch {
@@ -46,35 +45,41 @@ class CoreData {
         }
     }
     
-    private func queryItem<T: Decodable>(entityName: String, item: T.Type) -> T? {
+    private func queryItem<T: Decodable>(entityName: String, item: T.Type, coreDataKey: CoreDataKey) -> T? {
         let context = persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
         request.returnsObjectsAsFaults = false
 
         do {
-            guard let result = try context.fetch(request).first as? NSManagedObject,
-                  let jsonData = result.value(forKey: CoreDataKey.jsonData.rawValue) as? Data else { return nil }
+            if coreDataKey == .jsonData {
+                guard let result = try context.fetch(request).first as? NSManagedObject,
+                      let jsonData = result.value(forKey: coreDataKey.rawValue) as? Data else { return nil }
 
-            return try JSONDecoder().decode(T.self, from: jsonData)
+                return try JSONDecoder().decode(T.self, from: jsonData)
+            }
+            guard let result = try context.fetch(request).first as? NSManagedObject,
+                  let value = result.value(forKey: coreDataKey.rawValue) as? T else { return nil }
+
+            return value
         } catch {
             return nil
         }
     }
     
     func saveUser<T: Codable>(_ user: T) {
-        putItem(CoreDataKey.user.rawValue, common: user)
+        putItem(CoreDataKey.user.rawValue, common: user, coreDataKey: .jsonData)
     }
     
     func saveMoviesPagination(endPoint: EndPoint, _ moviesPagination: DtoEntertainmentPagination<DtoMovie>) {
         switch endPoint {
         case .commonPopular:
-            putItem(CoreDataKey.popularMoviesPagination.rawValue, common: moviesPagination)
+            putItem(CoreDataKey.popularMoviesPagination.rawValue, common: moviesPagination, coreDataKey: .jsonData)
             
         case .commonTopRated:
-            putItem(CoreDataKey.topRatedMoviesPagination.rawValue, common: moviesPagination)
+            putItem(CoreDataKey.topRatedMoviesPagination.rawValue, common: moviesPagination, coreDataKey: .jsonData)
             
         case .commonUpcoming:
-            putItem(CoreDataKey.upcomingMoviesPagination.rawValue, common: moviesPagination)
+            putItem(CoreDataKey.upcomingMoviesPagination.rawValue, common: moviesPagination, coreDataKey: .jsonData)
             
         default:
             break
@@ -84,10 +89,10 @@ class CoreData {
     func saveSeriesPagination(endPoint: EndPoint, _ seriesPagination: DtoEntertainmentPagination<DtoSerie>) {
         switch endPoint {
         case .commonPopular:
-            putItem(CoreDataKey.popularSeriesPagination.rawValue, common: seriesPagination)
+            putItem(CoreDataKey.popularSeriesPagination.rawValue, common: seriesPagination, coreDataKey: .jsonData)
             
         case .commonTopRated:
-            putItem(CoreDataKey.topRatedSeriesPagination.rawValue, common: seriesPagination)
+            putItem(CoreDataKey.topRatedSeriesPagination.rawValue, common: seriesPagination, coreDataKey: .jsonData)
             
         default:
             break
@@ -95,19 +100,19 @@ class CoreData {
     }
     
     func getClient() -> DtoUser? {
-        return queryItem(entityName: CoreDataKey.user.rawValue, item: DtoUser.self)
+        return queryItem(entityName: CoreDataKey.user.rawValue, item: DtoUser.self, coreDataKey: .jsonData)
     }
     
     func getMoviesPagination(endPoint: EndPoint) -> DtoEntertainmentPagination<DtoMovie>? {
         switch endPoint {
         case .commonPopular:
-            return queryItem(entityName: CoreDataKey.popularMoviesPagination.rawValue, item: DtoEntertainmentPagination<DtoMovie>.self)
+            return queryItem(entityName: CoreDataKey.popularMoviesPagination.rawValue, item: DtoEntertainmentPagination<DtoMovie>.self, coreDataKey: .jsonData)
         
         case .commonTopRated:
-            return queryItem(entityName: CoreDataKey.topRatedMoviesPagination.rawValue, item: DtoEntertainmentPagination<DtoMovie>.self)
+            return queryItem(entityName: CoreDataKey.topRatedMoviesPagination.rawValue, item: DtoEntertainmentPagination<DtoMovie>.self, coreDataKey: .jsonData)
             
         case .commonUpcoming:
-            return queryItem(entityName: CoreDataKey.upcomingMoviesPagination.rawValue, item: DtoEntertainmentPagination<DtoMovie>.self)
+            return queryItem(entityName: CoreDataKey.upcomingMoviesPagination.rawValue, item: DtoEntertainmentPagination<DtoMovie>.self, coreDataKey: .jsonData)
             
         default:
             return nil
@@ -117,10 +122,10 @@ class CoreData {
     func getSeriesPagination(endPoint: EndPoint) -> DtoEntertainmentPagination<DtoSerie>? {
         switch endPoint {
         case .commonPopular:
-            return queryItem(entityName: CoreDataKey.popularSeriesPagination.rawValue, item: DtoEntertainmentPagination<DtoSerie>.self)
+            return queryItem(entityName: CoreDataKey.popularSeriesPagination.rawValue, item: DtoEntertainmentPagination<DtoSerie>.self, coreDataKey: .jsonData)
             
         case .commonTopRated:
-            return queryItem(entityName: CoreDataKey.topRatedSeriesPagination.rawValue, item: DtoEntertainmentPagination<DtoSerie>.self)
+            return queryItem(entityName: CoreDataKey.topRatedSeriesPagination.rawValue, item: DtoEntertainmentPagination<DtoSerie>.self, coreDataKey: .jsonData)
             
         default:
             return nil
@@ -129,6 +134,14 @@ class CoreData {
     
     func signOut() {
         delete(entityName: CoreDataKey.user.rawValue)
+    }
+    
+    func getIsUsedBiometrics() -> Bool? {
+        return queryItem(entityName: CoreDataKey.biometrics.rawValue, item: Bool.self, coreDataKey: .isUsedBiometrics)
+    }
+    
+    func setIsUsedBiometrics(with isUsedBiometrics: Bool) {
+        putItem(CoreDataKey.biometrics.rawValue, common: isUsedBiometrics, coreDataKey: .isUsedBiometrics)
     }
 }
 
@@ -139,5 +152,7 @@ enum CoreDataKey: String {
     case topRatedMoviesPagination = "TopRatedMoviesPagination"
     case popularSeriesPagination = "PopularSeriesPagination"
     case topRatedSeriesPagination = "TopRatedSeriesPagination"
+    case biometrics = "Biometrics"
+    case isUsedBiometrics = "isUsedBiometrics"
     case jsonData = "jsonData"
 }
