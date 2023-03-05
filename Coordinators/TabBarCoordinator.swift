@@ -67,9 +67,9 @@ class TabBarCoordinator {
         let vc3 = buildFavouritesTabBarModule()
         let vc4 = buildProfileTabBarModule()
         
-        vc1.tabBarItem.image = UIImage(systemName: "house")
-        vc2.tabBarItem.image = UIImage(systemName: "magnifyingglass")
-        vc3.tabBarItem.image = UIImage(systemName: "star")
+        vc1.tabBarItem.image = UIImage(systemName: "house.circle.fill")
+        vc2.tabBarItem.image = UIImage(systemName: "magnifyingglass.circle.fill")
+        vc3.tabBarItem.image = UIImage(systemName: "star.circle.fill")
         vc4.tabBarItem.image = UIImage(systemName: "person.crop.circle.fill")
         
         vc1.title = String.getLabelForKey("common_home")
@@ -107,7 +107,7 @@ class TabBarCoordinator {
 
     private func showTabBar() {
         let vc = TabBarBuilder(tabs: buildTabBarItems()).build()
-        navigator.navigationBar.isHidden = true
+        navigator.interactivePopGestureRecognizer?.isEnabled = false
         navigator.pushViewController(vc, animated: true)
     }
 }

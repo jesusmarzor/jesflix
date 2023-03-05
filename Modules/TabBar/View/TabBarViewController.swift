@@ -18,12 +18,13 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
         tabBar.standardAppearance = tabBarAppearance
         tabBar.tintColor = .label
+        tabBar.backgroundColor = UIColor.theme(.body)
+        tabBar.isTranslucent = false
         setViewControllers(tabs, animated: true)
     }
     
     var tabBarAppearance: UITabBarAppearance {
         let appearance = UITabBarAppearance()
-        appearance.backgroundColor = UIColor.theme(.body)
         appearance.shadowColor = nil
         appearance.shadowImage = nil
         appearance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.theme(.letter),

@@ -13,6 +13,9 @@
 "common_top_rated_series" = "Series más valoradas";
 "common_upcoming_movies" = "Próximas películas";
 "common_use_biometrics" = "Usar biometría";
+"common_edit_profile" = "Editar perfil";
+"common_change_password" = "Cambiar contraseña";
+"common_ logout" = "Cerrar sesión";
 
 "login_welcome" = "Bienvenido @!";
 "login_sign_out_button" = "¿No eres tú?";

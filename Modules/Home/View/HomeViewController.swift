@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
         }
     }
     
-    private let homeFeedTable: UITableView = {
+    private lazy var homeFeedTable: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
         table.register(CollectionViewMoviesCell.self, forCellReuseIdentifier: CollectionViewMoviesCell.identifier)
         table.separatorStyle = .none
@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
         return table
     }()
     
-    private let heroHeader: HeroHeader = {
+    private lazy var heroHeader: HeroHeader = {
         let heroHeader = HeroHeader()
         return heroHeader
     }()

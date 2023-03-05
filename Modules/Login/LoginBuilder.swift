@@ -12,6 +12,7 @@ class LoginBuilder {
         let interactor = LoginInteractor(dataManager: dataManager)
         let presenter = LoginPresenter(interactor: interactor, coordinnatorOutput: coordinatorOutput)
         let view = LoginViewController(presenter: presenter)
+        view.hidesBottomBarWhenPushed = true
         presenter.view = view
         return view
     }

@@ -86,7 +86,7 @@ class LoginViewController: UIViewController {
     private func setUpMainStackView() {
         view.addSubview(mainStackView)
         mainStackView.translatesAutoresizingMaskIntoConstraints = false
-        mainStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        mainStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: JesflixSize.marginM.rawValue).isActive = true
         mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: JesflixSize.marginS.rawValue).isActive = true
         mainStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -JesflixSize.marginS.rawValue).isActive = true
         mainStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -JesflixSize.marginL.rawValue).isActive = true
@@ -126,7 +126,6 @@ class LoginViewController: UIViewController {
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, error in
                 DispatchQueue.main.async {
                     guard success, error == nil else {
-                        self.handleError(.userNotFound)
                         return
                     }
                     self.presenter.loginUserWithBiometrics()

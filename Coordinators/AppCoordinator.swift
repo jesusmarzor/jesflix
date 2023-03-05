@@ -7,6 +7,7 @@ class AppCoordinator {
 
     init(with navigator: UINavigationController, state: AppCoordinatorState) {
         self.navigator = navigator
+        navigator.navigationBar.isHidden = true
         self.state = state
         self.tabBarChildCoordinator = TabBarCoordinator(with: navigator, state: .initial)
     }
@@ -40,7 +41,7 @@ class AppCoordinator {
         let vc = LoginBuilder { _ in
             self.tabBarChildCoordinator.start()
         }.build()
-        navigator.pushViewController(vc, animated: true)
+        navigator.setViewControllers([vc], animated: false)
     }
 }
 
