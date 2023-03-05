@@ -81,9 +81,6 @@ class LoginViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
         setUpMainStackView()
         configureMainStackView()
-        if presenter.isUsedBiometrics(), context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
-            useBiometrics()
-        }
     }
     
     private func setUpMainStackView() {
@@ -104,6 +101,9 @@ class LoginViewController: UIViewController {
             emailTextField.isHidden = true
             biometricsButton.isHidden = false
             setUpSignOutLabelLayout()
+            if presenter.isUsedBiometrics() {
+                useBiometrics()
+            }
         } else {
             emailTextField.text = ""
             welcomeEmailLabel.isHidden = true
@@ -112,22 +112,6 @@ class LoginViewController: UIViewController {
             biometricsButton.isHidden = true
         }
     }
-
-    private func setUpTitleLabel() {
-        self.view.addSubview(titleLabel)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-    }
-    
-    private func setUpWelcomeEmailLabelLayout() {
-        view.addSubview(welcomeEmailLabel)
-        welcomeEmailLabel.translatesAutoresizingMaskIntoConstraints = false
-        welcomeEmailLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: JesflixSize.marginS.rawValue).isActive = true
-        welcomeEmailLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: JesflixSize.marginS.rawValue).isActive = true
-        welcomeEmailLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -JesflixSize.marginS.rawValue).isActive = true
-    }
     
     private func setUpSignOutLabelLayout() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTapSignOutLabel))
@@ -135,47 +119,18 @@ class LoginViewController: UIViewController {
         signOutLabel.addGestureRecognizer(tap)
     }
     
-    private func setUpEmailTextField() {
-        self.view.addSubview(emailTextField)
-        emailTextField.translatesAutoresizingMaskIntoConstraints = false
-        emailTextField.topAnchor.constraint(equalTo: welcomeEmailLabel.bottomAnchor, constant: JesflixSize.marginS.rawValue).isActive = true
-        emailTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: JesflixSize.marginS.rawValue).isActive = true
-        emailTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -JesflixSize.marginS.rawValue).isActive = true
-    }
-    
-    private func setUpPasswordTextField() {
-        self.view.addSubview(passwordTextField)
-        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
-        passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: JesflixSize.marginS.rawValue).isActive = true
-        passwordTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: JesflixSize.marginS.rawValue).isActive = true
-        passwordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -JesflixSize.marginS.rawValue).isActive = true
-    }
-    
-    private func setUpBiometricsButton() {
-        self.view.addSubview(biometricsButton)
-        biometricsButton.translatesAutoresizingMaskIntoConstraints = false
-        biometricsButton.bottomAnchor.constraint(equalTo: loginButton.topAnchor, constant: -JesflixSize.marginM.rawValue).isActive = true
-        biometricsButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: JesflixSize.marginS.rawValue).isActive = true
-        biometricsButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -JesflixSize.marginS.rawValue).isActive = true
-    }
-    
-    private func setUpLoginButton() {
-        self.view.addSubview(loginButton)
-        loginButton.translatesAutoresizingMaskIntoConstraints = false
-        loginButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -JesflixSize.marginL.rawValue).isActive = true
-        loginButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: JesflixSize.marginS.rawValue).isActive = true
-        loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -JesflixSize.marginS.rawValue).isActive = true
-    }
-    
     private func useBiometrics() {
-        let reason = "Por favor autoriza el inicio de sesión con touchID o FaceID"
-        context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, error in
-            DispatchQueue.main.async {
-                guard success, error == nil else {
-                    print("error no se detectó huella o rostro")
-                    return
+        var error: NSError?
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = String.getLabelForKey("login_biometrics_reason")
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, error in
+                DispatchQueue.main.async {
+                    guard success, error == nil else {
+                        self.handleError(.userNotFound)
+                        return
+                    }
+                    self.presenter.loginUserWithBiometrics()
                 }
-                self.presenter.loginUserWithBiometrics()
             }
         }
     }
@@ -189,10 +144,8 @@ class LoginViewController: UIViewController {
     
     @objc
     private func didTapBiometricsButton() {
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
-            useBiometrics()
-            presenter.setIsUsedBiometrics(with: true)
-        }
+        useBiometrics()
+        presenter.setIsUsedBiometrics(with: true)
     }
     
     @objc

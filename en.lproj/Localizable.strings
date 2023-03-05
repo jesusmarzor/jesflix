@@ -12,9 +12,11 @@
 "common_top_rated_movies" = "Top rated movies";
 "common_top_rated_series" = "Top rated series";
 "common_upcoming_movies" = "Upcoming movies";
+"common_use_biometrics" = "Use biometrics";
 
 "login_welcome" = "Welcome @!";
 "login_sign_out_button" = "are not you?";
+"login_biometrics_reason" = "Please, authorize login with touchID or FaceID";
 
 "error_wrong_password" = "Wrong password";
 "error_user_not_found" = "User not found";

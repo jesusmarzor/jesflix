@@ -12,9 +12,11 @@
 "common_top_rated_movies" = "Películas más valoradas";
 "common_top_rated_series" = "Series más valoradas";
 "common_upcoming_movies" = "Próximas películas";
+"common_use_biometrics" = "Usar biometría";
 
 "login_welcome" = "Bienvenido @!";
 "login_sign_out_button" = "¿No eres tú?";
+"login_biometrics_reason" = "Por favor, autoriza el inicio de sesión con touchID o FaceID";
 
 "error_wrong_password" = "Contraseña incorrecta";
 "error_user_not_found" = "Usuario no encontrado";
