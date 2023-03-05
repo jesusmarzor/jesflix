@@ -15,6 +15,8 @@ class HomeViewController: UIViewController {
         let table = UITableView(frame: .zero, style: .grouped)
         table.register(CollectionViewMoviesCell.self, forCellReuseIdentifier: CollectionViewMoviesCell.identifier)
         table.separatorStyle = .none
+        table.backgroundColor = UIColor.clear
+        table.contentInsetAdjustmentBehavior = .never
         return table
     }()
     
@@ -34,16 +36,20 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.theme(.body)
+        homeFeedTable.delegate = self
+        homeFeedTable.dataSource = self
         presenter.viewDidLoad()
-        homeFeedTable.backgroundColor = UIColor.theme(.body)
         setUpHomeFeedTableViewLayout()
     }
     
     private func setUpHomeFeedTableViewLayout() {
         view.addSubview(homeFeedTable)
-        homeFeedTable.delegate = self
-        homeFeedTable.dataSource = self
-        homeFeedTable.frame = view.bounds
+        homeFeedTable.translatesAutoresizingMaskIntoConstraints = false
+        homeFeedTable.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        homeFeedTable.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        homeFeedTable.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        homeFeedTable.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
     
     private func loadHeroHeader() {
@@ -82,7 +88,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = entertainmentSections[indexPath.section]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewMoviesCell.identifier, for: indexPath) as? CollectionViewMoviesCell else {return UITableViewCell()}
-        cell.backgroundColor = UIColor.theme(.body)
+        cell.backgroundColor = UIColor.clear
         cell.configure(entertainments: section.entertainments, delegate: self)
         return cell
     }
