@@ -15,7 +15,7 @@
 "common_use_biometrics" = "Usar biometría";
 "common_edit_profile" = "Editar perfil";
 "common_change_password" = "Cambiar contraseña";
-"common_ logout" = "Cerrar sesión";
+"common_logout" = "Cerrar sesión";
 
 "login_welcome" = "Bienvenido @!";
 "login_sign_out_button" = "¿No eres tú?";

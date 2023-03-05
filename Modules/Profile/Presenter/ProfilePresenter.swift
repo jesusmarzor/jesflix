@@ -17,9 +17,9 @@ class ProfilePresenter {
     private func createTableViewModel() -> [ProfileTableViewModel] {
         return [
             ProfileTableViewModel(type: .header, icon: UIImage(systemName: "person.circle.fill")!, label: client.photoUrl),
-            ProfileTableViewModel(type: .editProfile, icon: UIImage(systemName: "pencil.circle.fill")!, label: "Editar perfil"),
-            ProfileTableViewModel(type: .changePassword, icon: UIImage(systemName: "person.circle.fill")!, label: "Cambiar contraseña"),
-            ProfileTableViewModel(type: .logout, icon: UIImage(systemName: "restart.circle.fill")!, label: "Cerrar sesión")
+            ProfileTableViewModel(type: .editProfile, icon: UIImage(systemName: "pencil.circle.fill")!, label: String.getLabelForKey("common_edit_profile")),
+            ProfileTableViewModel(type: .changePassword, icon: UIImage(systemName: "person.circle.fill")!, label: String.getLabelForKey("common_change_password")),
+            ProfileTableViewModel(type: .logout, icon: UIImage(systemName: "restart.circle.fill")!, label: String.getLabelForKey("common_logout"))
         ]
     }
 }
