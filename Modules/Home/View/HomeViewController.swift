@@ -54,7 +54,7 @@ class HomeViewController: UIViewController {
     
     private func loadHeroHeader() {
         if let popularMovie = entertainmentSections.first?.entertainments.last {
-            let heroHeader = HeroHeader(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+            let heroHeader = HeroHeader(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height * 0.75))
             heroHeader.configure(entertainment: popularMovie)
             homeFeedTable.tableHeaderView = heroHeader
         }
